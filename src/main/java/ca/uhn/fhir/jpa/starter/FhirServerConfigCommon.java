@@ -74,7 +74,7 @@ public class FhirServerConfigCommon {
   }
 
   /**
-   * Configure FHIR properties around the the JPA server via this bean
+   * Configure FHIR properties around the JPA server via this bean
    */
   @Bean
   public DaoConfig daoConfig(AppProperties appProperties) {
@@ -184,10 +184,12 @@ public class FhirServerConfigCommon {
   }
 
   /**
-   * The following bean configures the database connection. The 'url' property value of "jdbc:derby:directory:jpaserver_derby_files;create=true" indicates that the server should save resources in a
+   * The following bean configures the database connection. The 'url' property value of
+	* "jdbc:derby:directory:jpaserver_derby_files;create=true" indicates that the server should save resources in a
    * directory called "jpaserver_derby_files".
    * <p>
-   * A URL to a remote database could also be placed here, along with login credentials and other properties supported by BasicDataSource.
+   * A URL to a remote database could also be placed here, along with login credentials and other properties
+	* supported by BasicDataSource.
    */
   /*@Bean(destroyMethod = "close")
   public BasicDataSource dataSource() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
