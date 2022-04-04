@@ -132,7 +132,7 @@ hapi:
     #    reuse_cached_search_results_millis: 60000
     tester:
       home:
-        name: IST Server (R4 FHIR)
+        name: AIST Server (R4 FHIR)
         server_address: 'http://aist-partner.projekte.fh-hagenberg.at:8080/fhir' # 'http://localhost:8080/fhir'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
