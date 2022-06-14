@@ -7,7 +7,7 @@ spring:
     check-location: false
     baselineOnMigrate: true
   datasource:
-    url: 'jdbc:postgresql://postgres_db:5432/hapi'
+    url: 'jdbc:postgresql://postgres_hapi_pica_db:5432/hapi'
     username: admin
     password: admin
     driverClassName: org.postgresql.Driver
