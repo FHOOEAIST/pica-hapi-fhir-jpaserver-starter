@@ -20,6 +20,7 @@ import ca.uhn.fhir.jpa.partition.PartitionManagementProvider;
 import ca.uhn.fhir.jpa.provider.*;
 import ca.uhn.fhir.jpa.provider.dstu3.JpaConformanceProviderDstu3;
 import ca.uhn.fhir.jpa.search.DatabaseBackedPagingProvider;
+import ca.uhn.fhir.jpa.starter.providers.AuditEventResourceProvider;
 import ca.uhn.fhir.jpa.subscription.util.SubscriptionDebugLogInterceptor;
 import ca.uhn.fhir.mdm.provider.MdmProviderLoader;
 import ca.uhn.fhir.narrative.DefaultThymeleafNarrativeGenerator;
@@ -102,6 +103,9 @@ public class BaseJpaRestfulServer extends RestfulServer {
   @Autowired
   private IValidationSupport myValidationSupport;
 
+  @Autowired
+  private AuditEventResourceProvider auditEventResourceProvider;
+
   public BaseJpaRestfulServer() {
   }
 
@@ -134,6 +138,7 @@ public class BaseJpaRestfulServer extends RestfulServer {
     	mdmProviderProvider.get().loadProvider();
 
     registerProviders(resourceProviderFactory.createProviders());
+	 registerProvider(auditEventResourceProvider);
     registerProvider(jpaSystemProvider);
     /*
      * The conformance provider exports the supported resources, search parameters, etc for
