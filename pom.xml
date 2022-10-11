@@ -41,8 +41,12 @@
         </repository>
     </repositories>
 
-
     <dependencies>
+        <dependency>
+            <groupId>science.aist.gtf</groupId>
+            <artifactId>graph</artifactId>
+            <version>2.0.0</version>
+        </dependency>
         <dependency>
             <groupId>science.aist</groupId>
             <artifactId>fhir-audit-event-to-xes</artifactId>
@@ -52,6 +56,21 @@
             <groupId>science.aist</groupId>
             <artifactId>fhir-audit-event-to-ocel</artifactId>
             <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>science.aist</groupId>
+            <artifactId>xes-to-graphviz</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>guru.nidi</groupId>
+            <artifactId>graphviz-java</artifactId>
+            <version>0.18.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graalvm.js</groupId>
+            <artifactId>js</artifactId>
+            <version>20.0.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
