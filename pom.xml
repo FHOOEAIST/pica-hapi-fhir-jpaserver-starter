@@ -45,12 +45,12 @@
         <dependency>
             <groupId>science.aist</groupId>
             <artifactId>fhir-audit-event-to-xes</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>science.aist</groupId>
             <artifactId>fhir-audit-event-to-ocel</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>science.aist</groupId>
