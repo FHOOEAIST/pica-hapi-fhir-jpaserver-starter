@@ -46,23 +46,11 @@
             <groupId>science.aist</groupId>
             <artifactId>fhir-audit-event-to-xes</artifactId>
             <version>1.1.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>science.aist.gtf</groupId>
-                    <artifactId>graph</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>science.aist</groupId>
             <artifactId>fhir-audit-event-to-ocel</artifactId>
             <version>1.1.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>science.aist.gtf</groupId>
-                    <artifactId>graph</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>science.aist</groupId>
