@@ -29,6 +29,8 @@ import ca.uhn.fhir.narrative2.NullNarrativeGenerator;
 import ca.uhn.fhir.rest.openapi.OpenApiInterceptor;
 import ca.uhn.fhir.rest.server.*;
 import ca.uhn.fhir.rest.server.interceptor.*;
+import ca.uhn.fhir.rest.server.interceptor.consent.ConsentInterceptor;
+import ca.uhn.fhir.rest.server.interceptor.consent.IConsentService;
 import ca.uhn.fhir.rest.server.interceptor.partition.RequestTenantPartitionInterceptor;
 import ca.uhn.fhir.rest.server.provider.ResourceProviderFactory;
 import ca.uhn.fhir.rest.server.tenant.UrlBaseTenantIdentificationStrategy;
@@ -106,6 +108,9 @@ public class BaseJpaRestfulServer extends RestfulServer {
   @Autowired
   private AuditEventResourceProvider auditEventResourceProvider;
 
+	@Autowired
+	private IConsentService auditEventCreatorConsentInterceptor;
+
   public BaseJpaRestfulServer() {
   }
 
@@ -179,6 +184,11 @@ public class BaseJpaRestfulServer extends RestfulServer {
         throw new IllegalStateException();
       }
     }
+
+	  ConsentInterceptor consentInterceptor = new ConsentInterceptor();
+	  consentInterceptor.registerConsentService(auditEventCreatorConsentInterceptor);
+
+	  registerInterceptor(consentInterceptor);
 
     /*
      * ETag Support
