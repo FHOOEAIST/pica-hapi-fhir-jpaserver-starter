@@ -21,7 +21,7 @@ import science.aist.xes.model.LogType;
 import science.aist.xes.model.ObjectFactory;
 import science.aist.xes.model.XMLRepository;
 import science.aist.xes.model.impl.LogRepository;
-import science.aist.xestographviz.GraphToDirectFollowerGraphGraphVizTransformer;
+import science.aist.xestographviz.GraphToDirectlyFollowsGraphGraphVizTransformer;
 import science.aist.xestographviz.XesToGraphTransformer;
 
 import javax.servlet.http.HttpServletResponse;
@@ -102,7 +102,7 @@ public class AuditEventResourceProviderR5 implements IResourceProvider, AuditEve
 		List<AuditEvent> collect = search.getAllResources().stream().map(AuditEvent.class::cast).collect(Collectors.toList());
 		LogType log = service.convertFhirAuditEventsToXESLog(new AuditEventBundle("not needed", collect));
 
-		Transformer<LogType, String> xes2graphViz = new XesToGraphTransformer().andThen(new GraphToDirectFollowerGraphGraphVizTransformer());
+		Transformer<LogType, String> xes2graphViz = new XesToGraphTransformer().andThen(new GraphToDirectlyFollowsGraphGraphVizTransformer());
 		String res = xes2graphViz.applyTransformation(log);
 
 		theServletResponse.setStatus(200);

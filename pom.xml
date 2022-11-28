@@ -55,7 +55,7 @@
         <dependency>
             <groupId>science.aist</groupId>
             <artifactId>xes-to-graphviz</artifactId>
-            <version>1.0.0</version>
+            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>guru.nidi</groupId>
