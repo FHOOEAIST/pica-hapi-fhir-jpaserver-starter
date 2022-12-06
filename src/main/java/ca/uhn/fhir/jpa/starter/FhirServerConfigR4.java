@@ -6,15 +6,17 @@ import ca.uhn.fhir.jpa.starter.annotations.OnR4Condition;
 import ca.uhn.fhir.jpa.starter.cql.StarterCqlR4Config;
 import ca.uhn.fhir.jpa.starter.interceptors.AuditEventCreatorConsentInterceptor;
 import ca.uhn.fhir.jpa.starter.interceptors.creators.*;
-import ca.uhn.fhir.jpa.starter.providers.AuditEventResourceProvider;
 import ca.uhn.fhir.jpa.starter.providers.AuditEventResourceProviderR4;
 import ca.uhn.fhir.jpa.starter.transformer.AuditEventR4ToR5Transformer;
+import ca.uhn.fhir.rest.server.IResourceProvider;
 import org.hl7.fhir.r4.model.AuditEvent;
 import org.hl7.fhir.r4.model.Encounter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import science.aist.fhirauditeventtoocel.FhirAuditEventsToOCELLogService;
+import science.aist.fhirauditeventtoxes.FhirAuditEventsToXESLogService;
 import science.aist.gtf.transformation.Transformer;
 
 @Configuration
@@ -26,13 +28,24 @@ import science.aist.gtf.transformation.Transformer;
 	ElasticsearchConfig.class
 })
 public class FhirServerConfigR4 {
+
 	@Bean
-	AuditEventCreatorConsentInterceptor auditEventCreatorConsentInterceptor() {
+	public FhirAuditEventsToXESLogService fhirAuditEventsToXESLogService() {
+		return new FhirAuditEventsToXESLogService();
+	}
+
+	@Bean
+	public FhirAuditEventsToOCELLogService fhirAuditEventsToOCELLogService() {
+		return new FhirAuditEventsToOCELLogService();
+	}
+
+	@Bean
+	public AuditEventCreatorConsentInterceptor auditEventCreatorConsentInterceptor() {
 		return new AuditEventCreatorConsentInterceptor();
 	}
 
 	@Bean(name = "auditEventResourceProvider")
-	public AuditEventResourceProvider auditEventResourceProvider() {
+	public IResourceProvider auditEventResourceProvider() {
 		return new AuditEventResourceProviderR4();
 	}
 

@@ -7,12 +7,10 @@ spring:
     check-location: false
     baselineOnMigrate: true
   datasource:
-    url: 'jdbc:h2:file:./target/database/h2'
-    #url: jdbc:h2:mem:test_mem
-    username: sa
-    password: null
-    driverClassName: org.h2.Driver
-    max-active: 15
+    url: 'jdbc:postgresql://postgres_hapi_pica_db:5432/hapi'
+    username: admin
+    password: admin
+    driverClassName: org.postgresql.Driver
 
     # database connection pool size
     hikari:
@@ -25,15 +23,15 @@ spring:
       #If using H2, then supply the value of ca.uhn.fhir.jpa.model.dialect.HapiFhirH2Dialect
       #If using postgres, then supply the value of ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
 
-      hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirH2Dialect
-      #      hibernate.hbm2ddl.auto: update
-      #      hibernate.jdbc.batch_size: 20
-      #      hibernate.cache.use_query_cache: false
-      #      hibernate.cache.use_second_level_cache: false
-      #      hibernate.cache.use_structured_entries: false
-      #      hibernate.cache.use_minimal_puts: false
-      ###    These settings will enable fulltext search with lucene
-      hibernate.search.enabled: false
+      hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
+  #      hibernate.hbm2ddl.auto: update
+  #      hibernate.jdbc.batch_size: 20
+  #      hibernate.cache.use_query_cache: false
+  #      hibernate.cache.use_second_level_cache: false
+  #      hibernate.cache.use_structured_entries: false
+  #      hibernate.cache.use_minimal_puts: false
+  ###    These settings will enable fulltext search with lucene
+  #      hibernate.search.enabled: true
   #      hibernate.search.backend.type: lucene
   #      hibernate.search.backend.analysis.configurer: ca.uhn.fhir.jpa.search.HapiLuceneAnalysisConfigurer
   #      hibernate.search.backend.directory.type: local-filesystem
@@ -47,7 +45,7 @@ hapi:
     ### This enables the swagger-ui at /fhir/swagger-ui/index.html as well as the /fhir/api-docs (see https://hapifhir.io/hapi-fhir/docs/server_plain/openapi.html)
     openapi_enabled: true
     ### This is the FHIR version. Choose between, DSTU2, DSTU3, R4 or R5
-    fhir_version: R4
+    fhir_version: R5
     ### enable to use the ApacheProxyAddressStrategy which uses X-Forwarded-* headers
     ### to determine the FHIR server address
     #   use_apache_address_strategy: false
@@ -134,10 +132,10 @@ hapi:
     #    reuse_cached_search_results_millis: 60000
     tester:
       home:
-        name: Local Tester
-        server_address: 'http://localhost:8080/fhir'
+        name: AIST Server (R5 FHIR)
+        server_address: 'http://aist-partner.projekte.fh-hagenberg.at:8082/fhir' # 'http://localhost:8080/fhir'
         refuse_to_fetch_third_party_urls: false
-        fhir_version: R4
+        fhir_version: R5
 #      global:
 #        name: UHN_HAPI Server (R5 FHIR)
 #        server_address: "http://hapi.fhir.org/baseR5"
