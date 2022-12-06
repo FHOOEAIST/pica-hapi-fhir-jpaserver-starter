@@ -10,7 +10,7 @@ RUN mvn clean install -DskipTests -Djdk.lang.Process.launchMechanism=vfork
 
 FROM build-hapi AS build-distroless
 RUN mvn package spring-boot:repackage -Pboot
-RUN mkdir /app && cp /tmp/hapi-fhir-jpaserver-starter/target/ROOT.war /app/main.war
+RUN mkdir /app && cp /tmp/hapi-fhir-jpaserver-starter/target/ROOT.war /app/pica.war
 
 
 ########### bitnami tomcat version is suitable for debugging and comes with a shell
@@ -28,7 +28,7 @@ USER 1001
 
 COPY --chown=1001:1001 catalina.properties /opt/bitnami/tomcat/conf/catalina.properties
 COPY --chown=1001:1001 server.xml /opt/bitnami/tomcat/conf/server.xml
-COPY --from=build-hapi --chown=1001:1001 /tmp/hapi-fhir-jpaserver-starter/target/ROOT.war /opt/bitnami/tomcat/webapps_default/ROOT.war
+COPY --from=build-hapi --chown=1001:1001 /tmp/hapi-fhir-jpaserver-starter/target/ROOT.war /opt/bitnami/tomcat/webapps_default/pica.war
 
 ENV ALLOW_EMPTY_PASSWORD=yes
 
@@ -40,4 +40,4 @@ COPY --chown=nonroot:nonroot --from=build-distroless /app /app
 # is running as a non-root (uid != 0) user.
 USER 65532:65532
 WORKDIR /app
-CMD ["/app/main.war"]
+CMD ["/app/pica.war"]
