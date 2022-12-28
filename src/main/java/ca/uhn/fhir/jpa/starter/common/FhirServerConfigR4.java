@@ -1,4 +1,4 @@
-package ca.uhn.fhir.jpa.starter;
+package ca.uhn.fhir.jpa.starter.common;
 
 import ca.uhn.fhir.jpa.api.dao.IFhirResourceDao;
 import ca.uhn.fhir.jpa.config.r4.JpaR4Config;
@@ -22,8 +22,8 @@ import science.aist.gtf.transformation.Transformer;
 @Configuration
 @Conditional(OnR4Condition.class)
 @Import({
-	StarterJpaConfig.class,
 	JpaR4Config.class,
+	StarterJpaConfig.class,
 	StarterCqlR4Config.class,
 	ElasticsearchConfig.class
 })
