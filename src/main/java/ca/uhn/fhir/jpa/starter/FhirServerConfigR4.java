@@ -31,7 +31,7 @@ public class FhirServerConfigR4 {
 
 	@Bean
 	public FhirAuditEventsToXESLogService fhirAuditEventsToXESLogService() {
-		return new FhirAuditEventsToXESLogService();
+		return new FhirAuditEventsToXESLogService(ae -> ae.getPatient().getReference(), ae -> ae.getCode().getCodingFirstRep().getDisplay());
 	}
 
 	@Bean

@@ -63,13 +63,15 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 
 		return search.getAllResources()
 			.stream()
-			.map(AuditEvent.class::cast).filter(ae -> {
-				var reference = (Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/encounter").getValue();
-				var id = new IdType(reference.getReference());
-				var encounter = myEncounterDao.read(id);
-				System.out.println(encounter.getReasonCodeFirstRep().getCodingFirstRep().getCode());
-				return encounter.getReasonCodeFirstRep().getCoding().stream().anyMatch(c -> reasonCode.equals(c.getCode()));
-			})
+			.map(AuditEvent.class::cast)
+			// no filtering ftm
+//			.filter(ae -> {
+//				var reference = (Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/encounter").getValue();
+//				var id = new IdType(reference.getReference());
+//				var encounter = myEncounterDao.read(id);
+//				System.out.println(encounter.getReasonCodeFirstRep().getCodingFirstRep().getCode());
+//				return encounter.getReasonCodeFirstRep().getCoding().stream().anyMatch(c -> reasonCode.equals(c.getCode()));
+//			})
 			.map(auditEventR4ToR5Transformer::applyTransformation)
 			.collect(Collectors.toList());
 	}

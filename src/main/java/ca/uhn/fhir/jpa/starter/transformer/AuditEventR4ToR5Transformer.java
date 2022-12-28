@@ -18,6 +18,7 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 		.from(ae -> (DateTimeType) ae.getExtensionByUrl("http://fhir.r5.extensions/occurredDateTime").getValue()).toWith(org.hl7.fhir.r5.model.AuditEvent::setOccurred).with(date -> new org.hl7.fhir.r5.model.DateTimeType(date.getValue()))
 		.from(ae -> (Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/encounter").getValue()).toWith(org.hl7.fhir.r5.model.AuditEvent::setEncounter).with(ref -> new org.hl7.fhir.r5.model.Reference(ref.getReference()))
 		.from(ae -> (Coding) ae.getExtensionByUrl("http://fhir.r5.extensions/code").getValue()).toWith(org.hl7.fhir.r5.model.AuditEvent::setCode).with(code -> new org.hl7.fhir.r5.model.CodeableConcept().addCoding(new org.hl7.fhir.r5.model.Coding(code.getSystem(), code.getCode(), code.getDisplay())))
+		.from(ae -> (Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/patient").getValue()).toWith(org.hl7.fhir.r5.model.AuditEvent::setPatient).with(ref -> new org.hl7.fhir.r5.model.Reference(ref.getReference()))
 		.create(org.hl7.fhir.r5.model.AuditEvent::new);
 
 	@Override
