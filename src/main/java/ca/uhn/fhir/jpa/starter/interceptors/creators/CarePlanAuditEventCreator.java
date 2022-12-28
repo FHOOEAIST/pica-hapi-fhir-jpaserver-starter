@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.AuditEvent;
 import org.hl7.fhir.r4.model.CarePlan;
 
 /**
- * <p>TODO class description</p>
+ * <p>Creates an {@link AuditEvent} for a {@link CarePlan}</p>
  *
  * @author Andreas Pointner
  * @since 1.0

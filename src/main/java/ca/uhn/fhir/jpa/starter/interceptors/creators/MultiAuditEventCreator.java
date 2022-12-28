@@ -9,7 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * <p>TODO class description</p>
+ * <p>Creates an {@link AuditEvent} based on a list of {@link AuditEventCreator}s where the first matching creator
+ * is chosen.</p>
  *
  * @author Andreas Pointner
  * @since 1.0

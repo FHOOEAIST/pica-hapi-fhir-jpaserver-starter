@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import science.aist.fhirauditeventtoocel.FhirAuditEventsToOCELLogService;
-import science.aist.fhirauditeventtoxes.FhirAuditEventsToXESLogService;
 
 @Configuration
 @Conditional(OnR5Condition.class)
@@ -20,17 +18,6 @@ import science.aist.fhirauditeventtoxes.FhirAuditEventsToXESLogService;
 	ElasticsearchConfig.class
 })
 public class FhirServerConfigR5 {
-
-	@Bean
-	public FhirAuditEventsToXESLogService fhirAuditEventsToXESLogService() {
-		return new FhirAuditEventsToXESLogService();
-	}
-
-	@Bean
-	public FhirAuditEventsToOCELLogService fhirAuditEventsToOCELLogService() {
-		return new FhirAuditEventsToOCELLogService();
-	}
-
 	@Bean(name = "auditEventResourceProvider")
 	public IResourceProvider auditEventResourceProvider() {
 		return new AuditEventResourceProviderR5();

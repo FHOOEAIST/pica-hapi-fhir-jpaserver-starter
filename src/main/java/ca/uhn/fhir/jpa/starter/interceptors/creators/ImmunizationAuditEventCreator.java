@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.AuditEvent;
 import org.hl7.fhir.r4.model.Immunization;
 
 /**
- * <p>TODO class description</p>
+ * <p>Creates an {@link AuditEvent} for a {@link Immunization}</p>
  *
  * @author Andreas Pointner
  * @since 1.0

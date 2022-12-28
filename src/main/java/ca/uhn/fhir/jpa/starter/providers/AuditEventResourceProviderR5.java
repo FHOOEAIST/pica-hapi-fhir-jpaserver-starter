@@ -32,11 +32,11 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$xes", manualResponse = true, idempotent = true)
-	public void toXes(@OperationParam(name = "planDefinition") String planDefinition, HttpServletResponse theServletResponse) throws IOException {
+	public void toXes(@OperationParam(name = "planDefinition") String planDefinition, @OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
 		// TODO filtering for plan definition would actually be needed
 		List<AuditEvent> collect = search.getAllResources().stream().map(AuditEvent.class::cast).collect(Collectors.toList());
-		super.toXes(planDefinition, collect, theServletResponse);
+		super.toXes(planDefinition, collect, grouping, theServletResponse);
 	}
 
 	@Operation(name = "$ocel", manualResponse = true, idempotent = true)
@@ -47,9 +47,9 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$dfg", manualResponse = true, idempotent = true)
-	public void toDfg(HttpServletResponse theServletResponse) throws IOException {
+	public void toDfg(@OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
 		List<AuditEvent> collect = search.getAllResources().stream().map(AuditEvent.class::cast).collect(Collectors.toList());
-		super.toDfg(collect, theServletResponse);
+		super.toDfg(collect, grouping, theServletResponse);
 	}
 }

@@ -4,7 +4,7 @@ import org.hl7.fhir.r4.model.AuditEvent;
 import org.hl7.fhir.r4.model.Type;
 
 /**
- * <p>TODO class description</p>
+ * <p>Abstract base class that provides a few methods to create AuditEvent extensions</p>
  *
  * @author Andreas Pointner
  * @since 1.0

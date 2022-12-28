@@ -7,7 +7,7 @@ import org.hl7.fhir.r4.model.Encounter;
 import org.hl7.fhir.r4.model.Procedure;
 
 /**
- * <p>TODO class description</p>
+ * <p>Creates an {@link AuditEvent} for a {@link Procedure}</p>
  *
  * @author Andreas Pointner
  * @since 1.0

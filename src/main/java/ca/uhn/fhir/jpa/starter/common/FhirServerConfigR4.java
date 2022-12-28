@@ -28,17 +28,6 @@ import science.aist.gtf.transformation.Transformer;
 	ElasticsearchConfig.class
 })
 public class FhirServerConfigR4 {
-
-	@Bean
-	public FhirAuditEventsToXESLogService fhirAuditEventsToXESLogService() {
-		return new FhirAuditEventsToXESLogService(ae -> ae.getPatient().getReference(), ae -> ae.getCode().getCodingFirstRep().getDisplay());
-	}
-
-	@Bean
-	public FhirAuditEventsToOCELLogService fhirAuditEventsToOCELLogService() {
-		return new FhirAuditEventsToOCELLogService();
-	}
-
 	@Bean
 	public AuditEventCreatorConsentInterceptor auditEventCreatorConsentInterceptor() {
 		return new AuditEventCreatorConsentInterceptor();

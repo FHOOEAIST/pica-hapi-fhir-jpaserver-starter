@@ -5,7 +5,6 @@ import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.model.MutableGraph;
 import guru.nidi.graphviz.parse.Parser;
 import org.hl7.fhir.r5.model.AuditEvent;
-import org.springframework.beans.factory.annotation.Autowired;
 import science.aist.fhirauditeventtoocel.FhirAuditEventsToOCELLogService;
 import science.aist.fhirauditeventtoxes.FhirAuditEventsToXESLogService;
 import science.aist.fhirauditeventtoxes.domain.AuditEventBundle;
@@ -24,20 +23,19 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
- * <p>TODO class description</p>
+ * <p>Abstract base class for both R4 and R5 that performs actions on audit events</p>
  *
  * @author Andreas Pointner
  * @since 1.0
  */
 public class AbstractAuditEventResourceProvider {
 
-	@Autowired
-	protected FhirAuditEventsToXESLogService xesService;
+	protected void toXes(String rootElement, List<AuditEvent> collect, String traceConceptNameResolverPath, HttpServletResponse theServletResponse) throws IOException {
+		if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
+			traceConceptNameResolverPath = "getPatient.getReference";
+		}
 
-	@Autowired
-	protected FhirAuditEventsToOCELLogService ocelService;
-
-	protected void toXes(String rootElement, List<AuditEvent> collect, HttpServletResponse theServletResponse) throws IOException {
+		var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
 		LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, collect));
 		XMLRepository<LogType> repository = new LogRepository();
 		var outputStream = new ByteArrayOutputStream();
@@ -51,6 +49,7 @@ public class AbstractAuditEventResourceProvider {
 	}
 
 	protected void toOcel(List<AuditEvent> collect, HttpServletResponse theServletResponse) throws IOException {
+		var ocelService = new FhirAuditEventsToOCELLogService();
 		var log = ocelService.convertFhirAuditEventsToOCELLog(collect);
 		var repository = new science.aist.ocel.model.impl.LogRepository();
 		var outputStream = new ByteArrayOutputStream();
@@ -63,7 +62,11 @@ public class AbstractAuditEventResourceProvider {
 		theServletResponse.getWriter().close();
 	}
 
-	protected void toDfg(List<AuditEvent> collect, HttpServletResponse theServletResponse) throws IOException {
+	protected void toDfg(List<AuditEvent> collect, String traceConceptNameResolverPath, HttpServletResponse theServletResponse) throws IOException {
+		if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
+			traceConceptNameResolverPath = "getPatient.getReference";
+		}
+		var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
 		LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle("not needed", collect));
 
 		Transformer<LogType, String> xes2graphViz = new XesToGraphTransformer().andThen(new GraphToDirectlyFollowsGraphGraphVizTransformer());

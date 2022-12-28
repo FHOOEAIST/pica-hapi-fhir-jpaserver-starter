@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * <p>Resource Provider for Audit Events to transform them into either xes or ocel representation</p>
@@ -42,8 +43,8 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$xes", manualResponse = true, idempotent = true)
-	public void toXes(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode, HttpServletResponse theServletResponse) throws IOException {
-		super.toXes(reasonCode, filterAuditEventsByReasonCode(reasonCode), theServletResponse);
+	public void toXes(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode, @OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
+		super.toXes(reasonCode, filterAuditEventsByReasonCode(reasonCode), grouping, theServletResponse);
 	}
 
 	@Operation(name = "$ocel", manualResponse = true, idempotent = true)
@@ -54,25 +55,29 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$dfg", manualResponse = true, idempotent = true)
-	public void toDfg(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode, HttpServletResponse theServletResponse) throws IOException {
-		super.toDfg(filterAuditEventsByReasonCode(reasonCode), theServletResponse);
+	public void toDfg(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode, @OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
+		super.toDfg(filterAuditEventsByReasonCode(reasonCode), grouping, theServletResponse);
 	}
 
 	private List<org.hl7.fhir.r5.model.AuditEvent> filterAuditEventsByReasonCode(String reasonCode) {
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
 
-		return search.getAllResources()
+		Stream<AuditEvent> auditEventStream = search.getAllResources()
 			.stream()
-			.map(AuditEvent.class::cast)
-			// no filtering ftm
-//			.filter(ae -> {
-//				var reference = (Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/encounter").getValue();
-//				var id = new IdType(reference.getReference());
-//				var encounter = myEncounterDao.read(id);
-//				System.out.println(encounter.getReasonCodeFirstRep().getCodingFirstRep().getCode());
-//				return encounter.getReasonCodeFirstRep().getCoding().stream().anyMatch(c -> reasonCode.equals(c.getCode()));
-//			})
-			.map(auditEventR4ToR5Transformer::applyTransformation)
+			.map(AuditEvent.class::cast);
+
+		if (reasonCode != null && !reasonCode.isBlank() && !reasonCode.isEmpty()) {
+			auditEventStream = auditEventStream.filter(ae -> {
+				var reference = (Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/encounter").getValue();
+				var id = new IdType(reference.getReference());
+				var encounter = myEncounterDao.read(id);
+				return encounter.getReasonCodeFirstRep().getCoding().stream().anyMatch(c -> reasonCode.equals(c.getCode()));
+			});
+		}
+
+		// no filtering ftm
+
+		return auditEventStream.map(auditEventR4ToR5Transformer::applyTransformation)
 			.collect(Collectors.toList());
 	}
 

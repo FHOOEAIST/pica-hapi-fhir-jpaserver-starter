@@ -7,7 +7,7 @@ import science.aist.jack.general.PropertyMapperCreator;
 import java.util.function.Function;
 
 /**
- * <p>TODO class description</p>
+ * <p>Transforms an {@link AuditEvent} into a {@link org.hl7.fhir.r5.model.AuditEvent}</p>
  *
  * @author Andreas Pointner
  * @since 1.0
