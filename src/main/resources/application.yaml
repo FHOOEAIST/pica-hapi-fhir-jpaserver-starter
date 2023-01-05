@@ -143,8 +143,8 @@ hapi:
     #    reuse_cached_search_results_millis: 60000
     tester:
       home:
-        name: Local Tester
-        server_address: 'http://localhost:8080/fhir'
+        name: AIST Server
+        server_address: 'https://aist-partner.projekte.fh-hagenberg.at/pica/fhir/'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
 #      global:
