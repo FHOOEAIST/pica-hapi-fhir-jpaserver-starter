@@ -75,6 +75,6 @@ public class AbstractAuditEventResourceProvider {
 		theServletResponse.setStatus(200);
 		theServletResponse.setContentType("image/svg+xml");
 		MutableGraph g = new Parser().read(res);
-		Graphviz.fromGraph(g).width(1024).render(Format.SVG).toOutputStream(theServletResponse.getOutputStream());
+		Graphviz.fromGraph(g).totalMemory(1000000000).width(1024).render(Format.SVG).toOutputStream(theServletResponse.getOutputStream());
 	}
 }
