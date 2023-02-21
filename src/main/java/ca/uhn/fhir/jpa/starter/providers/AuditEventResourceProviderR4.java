@@ -5,6 +5,8 @@ import ca.uhn.fhir.jpa.searchparam.SearchParameterMap;
 import ca.uhn.fhir.rest.annotation.Operation;
 import ca.uhn.fhir.rest.annotation.OperationParam;
 import ca.uhn.fhir.rest.api.server.IBundleProvider;
+import ca.uhn.fhir.rest.param.ReferenceParam;
+import ca.uhn.fhir.rest.param.StringParam;
 import ca.uhn.fhir.rest.server.IResourceProvider;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.r4.model.AuditEvent;
@@ -43,8 +45,10 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$xes", manualResponse = true, idempotent = true)
-	public void toXes(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode, @OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
-		super.toXes(reasonCode, filterAuditEventsByReasonCode(reasonCode), grouping, theServletResponse);
+	public void toXes(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode,
+							@OperationParam(name = "patient", min = 1, max = 1) String patient,
+							@OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
+		super.toXes(reasonCode, filterAuditEvents(reasonCode, patient), grouping, theServletResponse);
 	}
 
 	@Operation(name = "$ocel", manualResponse = true, idempotent = true)
@@ -55,11 +59,14 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$dfg", manualResponse = true, idempotent = true)
-	public void toDfg(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode, @OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
-		super.toDfg(filterAuditEventsByReasonCode(reasonCode), grouping, theServletResponse);
+	public void toDfg(@OperationParam(name = "reasonCode", min = 1, max = 1) String reasonCode,
+							@OperationParam(name = "patient", min = 1, max = 1) String patient,
+							@OperationParam(name = "grouping", max = 1) String grouping, HttpServletResponse theServletResponse) throws IOException {
+		super.toDfg(filterAuditEvents(reasonCode, patient), grouping, theServletResponse);
 	}
 
-	private List<org.hl7.fhir.r5.model.AuditEvent> filterAuditEventsByReasonCode(String reasonCode) {
+	private List<org.hl7.fhir.r5.model.AuditEvent> filterAuditEvents(String reasonCode, String patient) {
+		// we have to select all from the database, because all the relevant fields are inside extensions
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
 
 		Stream<AuditEvent> auditEventStream = search.getAllResources()
@@ -75,7 +82,9 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 			});
 		}
 
-		// no filtering ftm
+		if (patient != null && !patient.isBlank() && !patient.isEmpty()) {
+			auditEventStream = auditEventStream.filter(ae -> ((Reference) ae.getExtensionByUrl("http://fhir.r5.extensions/patient").getValue()).getReference().equals(patient));
+		}
 
 		return auditEventStream.map(auditEventR4ToR5Transformer::applyTransformation)
 			.collect(Collectors.toList());
