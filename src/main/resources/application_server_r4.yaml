@@ -142,7 +142,7 @@ hapi:
     tester:
       home:
         name: AIST Server
-        server_address: 'https://aist-partner.projekte.fh-hagenberg.at/pica/fhir/'
+        server_address: 'http://aist-partner.projekte.fh-hagenberg.at:8082/fhir/'
         refuse_to_fetch_third_party_urls: false
         fhir_version: R4
 #      global:
