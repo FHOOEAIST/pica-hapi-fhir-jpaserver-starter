@@ -1,0 +1,6408 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [ {
+    "fullUrl": "urn:uuid:c9d2cf4d-36fc-3827-95d5-f419727b7693",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "c9d2cf4d-36fc-3827-95d5-f419727b7693",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 103
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999990291"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Feest103",
+        "given": [ "Shonna561" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Shonna561.Feest103@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Alhartinger Weg 18" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999990291"
+    }
+  }, {
+    "fullUrl": "urn:uuid:2cb27c85-e9e8-36c8-bd60-124d5f4dc709",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "2cb27c85-e9e8-36c8-bd60-124d5f4dc709",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999968099"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bergstrom287",
+        "given": [ "Rutha66" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Rutha66.Bergstrom287@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Riegerting 9" ],
+        "city": "Mehrnbach",
+        "state": "Oberösterreich",
+        "postalCode": "4941",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999968099"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5a1fe081-bcea-35af-9753-7a5e72cef364",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5a1fe081-bcea-35af-9753-7a5e72cef364",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1203
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999997593"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rogahn59",
+        "given": [ "Venice604" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Venice604.Rogahn59@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999997593"
+    }
+  }, {
+    "fullUrl": "urn:uuid:390fc7bd-8a1c-3bab-9e76-ebd7c456d2e6",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "390fc7bd-8a1c-3bab-9e76-ebd7c456d2e6",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 29
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999983395"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Becker968",
+        "given": [ "Bart73" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Bart73.Becker968@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Pratsdorfstraße 25" ],
+        "city": "Pettenbach",
+        "state": "Oberösterreich",
+        "postalCode": "4643",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999983395"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e932521c-4925-3fa0-9aaa-455b4a665719",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e932521c-4925-3fa0-9aaa-455b4a665719",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 393
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999984096"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Collins926",
+        "given": [ "Winfred745" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Winfred745.Collins926@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999984096"
+    }
+  }, {
+    "fullUrl": "urn:uuid:1e66ed07-4cea-38b8-82c5-171ea566cfc4",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "1e66ed07-4cea-38b8-82c5-171ea566cfc4",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 25
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999985291"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Pollich983",
+        "given": [ "Krystal150" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Krystal150.Pollich983@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schloßberg 1" ],
+        "city": "Ried im Innkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4910",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999985291"
+    }
+  }, {
+    "fullUrl": "urn:uuid:481217ca-47ed-3c96-b020-1b91fa37fed7",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "481217ca-47ed-3c96-b020-1b91fa37fed7",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999971390"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Quitzon246",
+        "given": [ "Roger751" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Roger751.Quitzon246@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dr. Mayer Straße 8-10" ],
+        "city": "Bad Ischl",
+        "state": "Oberösterreich",
+        "postalCode": "4820",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999971390"
+    }
+  }, {
+    "fullUrl": "urn:uuid:939bb487-ea12-3bf2-8742-eca449a70333",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "939bb487-ea12-3bf2-8742-eca449a70333",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 18
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999962191"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Strosin214",
+        "given": [ "Robbyn526" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Robbyn526.Strosin214@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schulstraße 6" ],
+        "city": "Kremsmünster",
+        "state": "Oberösterreich",
+        "postalCode": "4550",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999962191"
+    }
+  }, {
+    "fullUrl": "urn:uuid:61f32661-4f6e-36cd-9b73-cd0ee3abe8be",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "61f32661-4f6e-36cd-9b73-cd0ee3abe8be",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 36
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991398"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Haley279",
+        "given": [ "Xochitl483" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Xochitl483.Haley279@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Ringstraße 13" ],
+        "city": "Sankt Leonhard bei Freistadt",
+        "state": "Oberösterreich",
+        "postalCode": "4294",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991398"
+    }
+  }, {
+    "fullUrl": "urn:uuid:64e2e6e8-3b94-35cc-8e75-52292dc62dcb",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "64e2e6e8-3b94-35cc-8e75-52292dc62dcb",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 13
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999960393"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Buckridge80",
+        "given": [ "Maynard46" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Maynard46.Buckridge80@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Taxlbergstraße 1" ],
+        "city": "Steinhaus",
+        "state": "Oberösterreich",
+        "postalCode": "4641",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999960393"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3bd78cd8-48b4-349c-89d4-9f3a02e881f8",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3bd78cd8-48b4-349c-89d4-9f3a02e881f8",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 222
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999993097"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Mueller846",
+        "given": [ "David908" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "David908.Mueller846@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Sartrestraße 11" ],
+        "city": "Pucking",
+        "state": "Oberösterreich",
+        "postalCode": "4055",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999993097"
+    }
+  }, {
+    "fullUrl": "urn:uuid:61c135fc-ce7f-3be9-b49c-3b6f5996b9c4",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "61c135fc-ce7f-3be9-b49c-3b6f5996b9c4",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 29
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999990697"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Crona259",
+        "given": [ "Alvin56" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Alvin56.Crona259@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Ungenach",
+        "state": "Oberösterreich",
+        "postalCode": "4841",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999990697"
+    }
+  }, {
+    "fullUrl": "urn:uuid:c7d92742-41b1-3e86-9862-68e9ec86c274",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "c7d92742-41b1-3e86-9862-68e9ec86c274",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 102
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999973891"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Runolfsson901",
+        "given": [ "Calista635" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Calista635.Runolfsson901@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Taxlbergstraße 1" ],
+        "city": "Steinhaus",
+        "state": "Oberösterreich",
+        "postalCode": "4641",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999973891"
+    }
+  }, {
+    "fullUrl": "urn:uuid:10bf5300-748f-34f7-826f-e9a7fa49baff",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "10bf5300-748f-34f7-826f-e9a7fa49baff",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 126
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999987297"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Walker122",
+        "given": [ "Trevor374" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Trevor374.Walker122@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hans-Sachs-Straße 4" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999987297"
+    }
+  }, {
+    "fullUrl": "urn:uuid:0bf32bb8-77a3-3184-ad18-ec6d2329ca52",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "0bf32bb8-77a3-3184-ad18-ec6d2329ca52",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 117
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999982199"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Krajcik437",
+        "given": [ "Brittanie254" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Brittanie254.Krajcik437@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Larnhauserweg 2" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999982199"
+    }
+  }, {
+    "fullUrl": "urn:uuid:011f0857-92e7-3c81-b26a-9a9c1908c9c9",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "011f0857-92e7-3c81-b26a-9a9c1908c9c9",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 284
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999960591"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hilpert278",
+        "given": [ "Kathi607" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kathi607.Hilpert278@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Traunuferstraße 9a" ],
+        "city": "Ansfelden",
+        "state": "Oberösterreich",
+        "postalCode": "4052",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999960591"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b124fbb3-6eea-334d-821b-352df9ec51bf",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b124fbb3-6eea-334d-821b-352df9ec51bf",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 115
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991695"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Krajcik437",
+        "given": [ "Carson894" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Carson894.Krajcik437@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Stiftsfeld 19" ],
+        "city": "Fischlham",
+        "state": "Oberösterreich",
+        "postalCode": "4652",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991695"
+    }
+  }, {
+    "fullUrl": "urn:uuid:0be3d617-2457-3e9b-9acc-3fd59176b53f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "0be3d617-2457-3e9b-9acc-3fd59176b53f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 315
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999994095"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Lesch175",
+        "given": [ "Hunter736" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Hunter736.Lesch175@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Holzheimer Straße 104" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999994095"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d5182453-6874-3f13-a440-fa5770fdbcb3",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d5182453-6874-3f13-a440-fa5770fdbcb3",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 217
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999974196"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bradtke547",
+        "given": [ "Natisha940" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Natisha940.Bradtke547@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Waltherstraße 5" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999974196"
+    }
+  }, {
+    "fullUrl": "urn:uuid:51effb08-8847-34d6-84be-f02849c646a5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "51effb08-8847-34d6-84be-f02849c646a5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 64
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999992198"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bergstrom287",
+        "given": [ "Randy380" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Randy380.Bergstrom287@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Harterfeldstraße 31" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999992198"
+    }
+  }, {
+    "fullUrl": "urn:uuid:2ad93cf2-b3fe-3650-bd83-96efc3ff0303",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "2ad93cf2-b3fe-3650-bd83-96efc3ff0303",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 32
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999994798"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schamberger479",
+        "given": [ "Margene509" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Margene509.Schamberger479@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Laudachweg 5" ],
+        "city": "Vorchdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4655",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999994798"
+    }
+  }, {
+    "fullUrl": "urn:uuid:a91b7a26-7142-3f61-ab5c-daf2122127bc",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "a91b7a26-7142-3f61-ab5c-daf2122127bc",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 17
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999967299"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Halvorson124",
+        "given": [ "Emilee283" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Emilee283.Halvorson124@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Römerstraße 5" ],
+        "city": "Schwanenstadt",
+        "state": "Oberösterreich",
+        "postalCode": "4690",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999967299"
+    }
+  }, {
+    "fullUrl": "urn:uuid:777f671a-a846-3b76-a9f6-547fdaf3e9be",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "777f671a-a846-3b76-a9f6-547fdaf3e9be",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 4
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999961391"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hagenes547",
+        "given": [ "Francisco472" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Francisco472.Hagenes547@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kaiser-Josef-Platz 52" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999961391"
+    }
+  }, {
+    "fullUrl": "urn:uuid:56a5f96a-9e4e-3e5d-bda2-9938cb05134a",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "56a5f96a-9e4e-3e5d-bda2-9938cb05134a",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 34
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999984898"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Padberg411",
+        "given": [ "Olin642" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Olin642.Padberg411@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dr. Mayer Straße 8-10" ],
+        "city": "Bad Ischl",
+        "state": "Oberösterreich",
+        "postalCode": "4820",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999984898"
+    }
+  }, {
+    "fullUrl": "urn:uuid:19eb19ab-b8b6-3d34-8376-ee7585b7035f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "19eb19ab-b8b6-3d34-8376-ee7585b7035f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 82
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999980797"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kassulke119",
+        "given": [ "Arron144" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Arron144.Kassulke119@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Römerstraße 5" ],
+        "city": "Schwanenstadt",
+        "state": "Oberösterreich",
+        "postalCode": "4690",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999980797"
+    }
+  }, {
+    "fullUrl": "urn:uuid:c61f92a6-a065-31e8-b99e-661a9d8868b0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "c61f92a6-a065-31e8-b99e-661a9d8868b0",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 39
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999979393"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Eichmann909",
+        "given": [ "Edmundo94" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Edmundo94.Eichmann909@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Albrechtstraße 24a" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999979393"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5d69813d-f77c-3990-b745-2fef1de411c6",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5d69813d-f77c-3990-b745-2fef1de411c6",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 10
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999974592"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kunze215",
+        "given": [ "Liane379" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Liane379.Kunze215@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Herrenstraße 54" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999974592"
+    }
+  }, {
+    "fullUrl": "urn:uuid:aa198375-bccc-3e70-92bf-6f90f566ab69",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "aa198375-bccc-3e70-92bf-6f90f566ab69",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 54
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999998195"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Fisher429",
+        "given": [ "Nicholle822" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Nicholle822.Fisher429@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Schärding",
+        "state": "Oberösterreich",
+        "postalCode": "4780",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999998195"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b07fcd09-1510-3055-98a8-58e629373f99",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b07fcd09-1510-3055-98a8-58e629373f99",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 56
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999977991"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Cronin387",
+        "given": [ "Hui924" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Hui924.Cronin387@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Ameisbergweg 2" ],
+        "city": "Kollerschlag",
+        "state": "Oberösterreich",
+        "postalCode": "4154",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999977991"
+    }
+  }, {
+    "fullUrl": "urn:uuid:45fc3a29-4885-341b-9164-44a399576608",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "45fc3a29-4885-341b-9164-44a399576608",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 6
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999972190"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Pagac496",
+        "given": [ "Bernardo699" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Bernardo699.Pagac496@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Wagner-Jauregg-Weg 15" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999972190"
+    }
+  }, {
+    "fullUrl": "urn:uuid:58143e21-4f0a-3953-9473-0b0f4ebdf912",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "58143e21-4f0a-3953-9473-0b0f4ebdf912",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 74
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999985192"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schaefer657",
+        "given": [ "Hilary419" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Hilary419.Schaefer657@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Fadingerstraße 1" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999985192"
+    }
+  }, {
+    "fullUrl": "urn:uuid:aa54e624-cafd-3729-b53c-656b3cb5cf99",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "aa54e624-cafd-3729-b53c-656b3cb5cf99",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 71
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999973792"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Dare640",
+        "given": [ "Khalilah870" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Khalilah870.Dare640@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hans-Sachs-Straße 4" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999973792"
+    }
+  }, {
+    "fullUrl": "urn:uuid:2e78e18a-89c7-3a5a-af8c-c03029eb69f0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "2e78e18a-89c7-3a5a-af8c-c03029eb69f0",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 9
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999989996"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Blanda868",
+        "given": [ "Mora209" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Mora209.Blanda868@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Altbauerstraße 13" ],
+        "city": "Ansfelden",
+        "state": "Oberösterreich",
+        "postalCode": "4052",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999989996"
+    }
+  }, {
+    "fullUrl": "urn:uuid:855e5a86-0cc9-3418-bdaf-0db0f880ce75",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "855e5a86-0cc9-3418-bdaf-0db0f880ce75",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 35
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999978098"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "O'Keefe54",
+        "given": [ "Karlene380" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Karlene380.O'Keefe54@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Bahnhofstraße 27" ],
+        "city": "Altheim",
+        "state": "Oberösterreich",
+        "postalCode": "4950",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999978098"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7a41a000-6306-32ba-baed-a97eb189a432",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7a41a000-6306-32ba-baed-a97eb189a432",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 36
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991497"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Cassin499",
+        "given": [ "Eldon28" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Eldon28.Cassin499@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Ameisbergweg 2" ],
+        "city": "Kollerschlag",
+        "state": "Oberösterreich",
+        "postalCode": "4154",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991497"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3263686f-2797-3b52-ad97-2a6dea33e0bf",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3263686f-2797-3b52-ad97-2a6dea33e0bf",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 89
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999987594"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Funk324",
+        "given": [ "Damaris45" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Damaris45.Funk324@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Traunuferstraße 9a" ],
+        "city": "Ansfelden",
+        "state": "Oberösterreich",
+        "postalCode": "4052",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999987594"
+    }
+  }, {
+    "fullUrl": "urn:uuid:651de03d-40d1-32c6-8c82-ad21bf800c5a",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "651de03d-40d1-32c6-8c82-ad21bf800c5a",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 9
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999995597"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Larson43",
+        "given": [ "Shiloh191" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Shiloh191.Larson43@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Liebenau 128" ],
+        "city": "Liebenau",
+        "state": "Oberösterreich",
+        "postalCode": "4252",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999995597"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e184557c-4276-33ea-9d6d-f69d22b57019",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e184557c-4276-33ea-9d6d-f69d22b57019",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 78
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991190"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Windler79",
+        "given": [ "Robbie31" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Robbie31.Windler79@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hauptstraße 17" ],
+        "city": "Schiedlberg",
+        "state": "Oberösterreich",
+        "postalCode": "4521",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991190"
+    }
+  }, {
+    "fullUrl": "urn:uuid:44a249e8-718f-301e-9081-5fa01a63eb82",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "44a249e8-718f-301e-9081-5fa01a63eb82",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 96
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999979591"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rolfson709",
+        "given": [ "Whitney250" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Whitney250.Rolfson709@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Sartrestraße 11" ],
+        "city": "Pucking",
+        "state": "Oberösterreich",
+        "postalCode": "4055",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999979591"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b2dddbae-5fb2-3cb2-aa77-b7737f2d9778",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b2dddbae-5fb2-3cb2-aa77-b7737f2d9778",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999959692"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Beatty507",
+        "given": [ "Philip822" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Philip822.Beatty507@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Ostermiething",
+        "state": "Oberösterreich",
+        "postalCode": "5121",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999959692"
+    }
+  }, {
+    "fullUrl": "urn:uuid:1a85c3c8-27fd-35eb-b39d-bf2480c0b859",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "1a85c3c8-27fd-35eb-b39d-bf2480c0b859",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 52
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999997999"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Mayer370",
+        "given": [ "Erick204" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Erick204.Mayer370@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hausmanningerstraße 8" ],
+        "city": "Kirchdorf an der Krems",
+        "state": "Oberösterreich",
+        "postalCode": "4560",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999997999"
+    }
+  }, {
+    "fullUrl": "urn:uuid:10a5f36f-3cd7-36e6-a48d-8f7e331022ba",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "10a5f36f-3cd7-36e6-a48d-8f7e331022ba",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 30
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999979096"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Thompson596",
+        "given": [ "Raphael767" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Raphael767.Thompson596@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Weidenstraße 10" ],
+        "city": "Gampern",
+        "state": "Oberösterreich",
+        "postalCode": "4851",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999979096"
+    }
+  }, {
+    "fullUrl": "urn:uuid:740f0ba1-a765-34db-85fb-0f83fa2721e4",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "740f0ba1-a765-34db-85fb-0f83fa2721e4",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 34
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999973198"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Paucek755",
+        "given": [ "Olinda137" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Olinda137.Paucek755@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Ostermiething",
+        "state": "Oberösterreich",
+        "postalCode": "5121",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999973198"
+    }
+  }, {
+    "fullUrl": "urn:uuid:186a9ee7-87a8-3a2c-8672-3562ff90ac90",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "186a9ee7-87a8-3a2c-8672-3562ff90ac90",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 151
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999977496"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Homenick806",
+        "given": [ "Nancie476" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Nancie476.Homenick806@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kobernaußerwaldstraße 22" ],
+        "city": "Lengau",
+        "state": "Oberösterreich",
+        "postalCode": "5212",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999977496"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7ee5ae7c-363f-3383-90b1-867c7ac9f46f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7ee5ae7c-363f-3383-90b1-867c7ac9f46f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 7
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999992594"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schmeler639",
+        "given": [ "Hyman89" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Hyman89.Schmeler639@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Weidenstraße 10" ],
+        "city": "Gampern",
+        "state": "Oberösterreich",
+        "postalCode": "4851",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999992594"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3aa98e61-13c6-33b7-88e9-1fe27832d636",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3aa98e61-13c6-33b7-88e9-1fe27832d636",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 3
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999972695"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Boyer713",
+        "given": [ "Denis399" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Denis399.Boyer713@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999972695"
+    }
+  }, {
+    "fullUrl": "urn:uuid:970519f1-7ab0-37b6-a3db-e223e548e270",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "970519f1-7ab0-37b6-a3db-e223e548e270",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999960294"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Farrell962",
+        "given": [ "Lauren941" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Lauren941.Farrell962@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hans-Sachs-Straße 4" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999960294"
+    }
+  }, {
+    "fullUrl": "urn:uuid:4ae83efd-23bf-35a1-9914-c525a22a7ad8",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "4ae83efd-23bf-35a1-9914-c525a22a7ad8",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 18
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999971895"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Heathcote539",
+        "given": [ "Kristofer887" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kristofer887.Heathcote539@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Neustraße 14" ],
+        "city": "Sierning",
+        "state": "Oberösterreich",
+        "postalCode": "4522",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999971895"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5424f5d0-2908-3457-b8d9-daa7aaefb8db",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5424f5d0-2908-3457-b8d9-daa7aaefb8db",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 482
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999998898"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schuster709",
+        "given": [ "Emory494" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Emory494.Schuster709@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Neustraße 14" ],
+        "city": "Sierning",
+        "state": "Oberösterreich",
+        "postalCode": "4522",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999998898"
+    }
+  }, {
+    "fullUrl": "urn:uuid:393121ce-21d2-3641-aafc-c61484a99e07",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "393121ce-21d2-3641-aafc-c61484a99e07",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 5
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999970293"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bashirian201",
+        "given": [ "Naoma512" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Naoma512.Bashirian201@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schulstraße 11" ],
+        "city": "Münzbach",
+        "state": "Oberösterreich",
+        "postalCode": "4323",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999970293"
+    }
+  }, {
+    "fullUrl": "urn:uuid:f59a4732-8d1a-3bf7-a766-f16870ce5de0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "f59a4732-8d1a-3bf7-a766-f16870ce5de0",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 39
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999995993"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kessler503",
+        "given": [ "Houston994" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Houston994.Kessler503@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Breitenangerstraße 11" ],
+        "city": "Grein",
+        "state": "Oberösterreich",
+        "postalCode": "4360",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999995993"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e49765ae-31a9-30c3-bda2-f658b9d9369b",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e49765ae-31a9-30c3-bda2-f658b9d9369b",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 27
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999977199"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Erdman779",
+        "given": [ "Lavon272" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Lavon272.Erdman779@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Ungenach",
+        "state": "Oberösterreich",
+        "postalCode": "4841",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999977199"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e6c86314-63bf-38c9-87e4-e252fff9baa7",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e6c86314-63bf-38c9-87e4-e252fff9baa7",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 41
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999968297"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hand679",
+        "given": [ "Shanell37" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Shanell37.Hand679@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Sonnenweg 10" ],
+        "city": "Weng im Innkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4952",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999968297"
+    }
+  }, {
+    "fullUrl": "urn:uuid:a2e444d3-6abf-3192-99ae-154c640a7b1d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "a2e444d3-6abf-3192-99ae-154c640a7b1d",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 43
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999976399"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Olson653",
+        "given": [ "Arlene209" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Arlene209.Olson653@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hartbergerstraße 1" ],
+        "city": "Buchkirchen",
+        "state": "Oberösterreich",
+        "postalCode": "4611",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999976399"
+    }
+  }, {
+    "fullUrl": "urn:uuid:eb365124-a51e-3d9b-a12e-1d07485a6549",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "eb365124-a51e-3d9b-a12e-1d07485a6549",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 9
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999971291"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Baumbach677",
+        "given": [ "Erwin847" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Erwin847.Baumbach677@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Miller von Aichholzstraße 49" ],
+        "city": "Gmunden",
+        "state": "Oberösterreich",
+        "postalCode": "4810",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999971291"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b92549e7-490e-33d2-9af1-c591710ba176",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b92549e7-490e-33d2-9af1-c591710ba176",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 82
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999975698"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Jakubowski832",
+        "given": [ "Huong243" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Huong243.Jakubowski832@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schulstraße 6" ],
+        "city": "Kremsmünster",
+        "state": "Oberösterreich",
+        "postalCode": "4550",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999975698"
+    }
+  }, {
+    "fullUrl": "urn:uuid:f8b6e7e8-7b59-3268-ba00-7e316016aed1",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "f8b6e7e8-7b59-3268-ba00-7e316016aed1",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 10
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999999391"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schuppe920",
+        "given": [ "Tonya123" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Tonya123.Schuppe920@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999999391"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b9575182-bc4f-3936-9180-ea0819e0673b",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b9575182-bc4f-3936-9180-ea0819e0673b",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 84
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999996892"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Paucek755",
+        "given": [ "Cletus494" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Cletus494.Paucek755@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Pratsdorfstraße 25" ],
+        "city": "Pettenbach",
+        "state": "Oberösterreich",
+        "postalCode": "4643",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999996892"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b35421fe-4e74-3d7e-9c64-e6ba07fe94c0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b35421fe-4e74-3d7e-9c64-e6ba07fe94c0",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 142
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999981696"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Towne435",
+        "given": [ "Armand155" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Armand155.Towne435@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfstraße 8" ],
+        "city": "Herzogsdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4175",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999981696"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7b85c8ac-1aba-3f50-84c9-c10ff9d8cd50",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7b85c8ac-1aba-3f50-84c9-c10ff9d8cd50",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 6
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999960690"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bednar518",
+        "given": [ "Haywood675" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Haywood675.Bednar518@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Waltherstraße 5" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999960690"
+    }
+  }, {
+    "fullUrl": "urn:uuid:0641cfb3-cc35-33a5-b1b1-8077fc3f60ca",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "0641cfb3-cc35-33a5-b1b1-8077fc3f60ca",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 163
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999989897"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Jakubowski832",
+        "given": [ "Luther918" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Luther918.Jakubowski832@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hartbergerstraße 1" ],
+        "city": "Buchkirchen",
+        "state": "Oberösterreich",
+        "postalCode": "4611",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999989897"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5a425900-07f0-3a89-bf57-19ffeffa6561",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5a425900-07f0-3a89-bf57-19ffeffa6561",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 63
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999978999"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hoppe518",
+        "given": [ "Thomasena108" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Thomasena108.Hoppe518@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Stocket 8" ],
+        "city": "Sankt Marienkirchen am Hausruck",
+        "state": "Oberösterreich",
+        "postalCode": "4926",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999978999"
+    }
+  }, {
+    "fullUrl": "urn:uuid:df8d9461-5474-3381-ae24-ad2200e3eb41",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "df8d9461-5474-3381-ae24-ad2200e3eb41",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 264
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991893"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Reynolds644",
+        "given": [ "Jude172" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Jude172.Reynolds644@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Lederergasse 12" ],
+        "city": "Lembach im Mühlkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4132",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991893"
+    }
+  }, {
+    "fullUrl": "urn:uuid:a4ad542f-1a23-3227-973b-c61fec7b6029",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "a4ad542f-1a23-3227-973b-c61fec7b6029",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 4
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999967695"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hartmann983",
+        "given": [ "Alica364" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Alica364.Hartmann983@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Birkenweg 14" ],
+        "city": "Neustift im Mühlkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4143",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999967695"
+    }
+  }, {
+    "fullUrl": "urn:uuid:918832cc-b999-3c5c-aeee-263baf04210b",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "918832cc-b999-3c5c-aeee-263baf04210b",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 188
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999988196"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rogahn59",
+        "given": [ "Veronika907" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Veronika907.Rogahn59@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Steyr",
+        "state": "Oberösterreich",
+        "postalCode": "4400",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999988196"
+    }
+  }, {
+    "fullUrl": "urn:uuid:0b2a692c-b1d2-3a9e-97d3-ce6f4f883748",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "0b2a692c-b1d2-3a9e-97d3-ce6f4f883748",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 114
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999983791"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Wolf938",
+        "given": [ "Jerald662" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Jerald662.Wolf938@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schulstraße 11" ],
+        "city": "Münzbach",
+        "state": "Oberösterreich",
+        "postalCode": "4323",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999983791"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6b927946-722e-331c-a448-00e586cd81fc",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "6b927946-722e-331c-a448-00e586cd81fc",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 61
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999992891"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Williamson769",
+        "given": [ "Damien170" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Damien170.Williamson769@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Albrechtstraße 24a" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999992891"
+    }
+  }, {
+    "fullUrl": "urn:uuid:334eb81a-7207-3734-a60c-6b6e4d0c1a40",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "334eb81a-7207-3734-a60c-6b6e4d0c1a40",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 136
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999999193"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Franecki195",
+        "given": [ "Eleni953" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Eleni953.Franecki195@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Wagner-Jauregg-Weg 15" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999999193"
+    }
+  }, {
+    "fullUrl": "urn:uuid:edcd8b84-b196-31bb-8900-6802bf5935a7",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "edcd8b84-b196-31bb-8900-6802bf5935a7",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999997791"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hamill307",
+        "given": [ "Tracey100" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Tracey100.Hamill307@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "nan 2" ],
+        "city": "Weyer",
+        "state": "Oberösterreich",
+        "postalCode": "3335",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999997791"
+    }
+  }, {
+    "fullUrl": "urn:uuid:9a9c5d6e-5065-3f95-afc2-952dcf4a1081",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "9a9c5d6e-5065-3f95-afc2-952dcf4a1081",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 28
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999985895"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Strosin214",
+        "given": [ "Patrina117" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Patrina117.Strosin214@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999985895"
+    }
+  }, {
+    "fullUrl": "urn:uuid:23361123-5b24-3120-aa58-e1b6d5294aa2",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "23361123-5b24-3120-aa58-e1b6d5294aa2",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 6
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999993295"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Wolf938",
+        "given": [ "Kala987" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kala987.Wolf938@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Grüner Weg 16" ],
+        "city": "Sankt Georgen im Attergau",
+        "state": "Oberösterreich",
+        "postalCode": "4880",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999993295"
+    }
+  }, {
+    "fullUrl": "urn:uuid:f303be2f-a893-39f7-8814-e5be48815952",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "f303be2f-a893-39f7-8814-e5be48815952",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999962290"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rutherford999",
+        "given": [ "Tomeka87" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Tomeka87.Rutherford999@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfstraße 19" ],
+        "city": "Pierbach",
+        "state": "Oberösterreich",
+        "postalCode": "4282",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999962290"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6fc308aa-9f04-3e82-89cc-2f84b43ff46f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "6fc308aa-9f04-3e82-89cc-2f84b43ff46f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 227
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999992495"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bashirian201",
+        "given": [ "Kristina583" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kristina583.Bashirian201@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Stocket 8" ],
+        "city": "Sankt Marienkirchen am Hausruck",
+        "state": "Oberösterreich",
+        "postalCode": "4926",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999992495"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d2773bca-27f3-3f8d-a0b2-cbd395fe75a1",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d2773bca-27f3-3f8d-a0b2-cbd395fe75a1",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 28
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999992396"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Lindgren255",
+        "given": [ "Antwan357" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Antwan357.Lindgren255@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Rainerweg 5" ],
+        "city": "Frankenburg am Hausruck",
+        "state": "Oberösterreich",
+        "postalCode": "4873",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999992396"
+    }
+  }, {
+    "fullUrl": "urn:uuid:2a3edbf5-2b20-3d34-b376-0d14f5e1043d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "2a3edbf5-2b20-3d34-b376-0d14f5e1043d",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999968990"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Toy286",
+        "given": [ "Christeen33" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Christeen33.Toy286@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Breitenangerstraße 11" ],
+        "city": "Grein",
+        "state": "Oberösterreich",
+        "postalCode": "4360",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999968990"
+    }
+  }, {
+    "fullUrl": "urn:uuid:05f6ae72-fb94-330b-a32a-ba4bb31b3357",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "05f6ae72-fb94-330b-a32a-ba4bb31b3357",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 256
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999979294"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Little434",
+        "given": [ "Danuta945" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Danuta945.Little434@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Georgestraße 27" ],
+        "city": "Langenstein",
+        "state": "Oberösterreich",
+        "postalCode": "4222",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999979294"
+    }
+  }, {
+    "fullUrl": "urn:uuid:594c04f5-49b0-3256-a858-f40806753d0b",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "594c04f5-49b0-3256-a858-f40806753d0b",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 149
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999976191"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Zieme486",
+        "given": [ "Mitchel812" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Mitchel812.Zieme486@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "nan 43" ],
+        "city": "Enns",
+        "state": "Oberösterreich",
+        "postalCode": "4470",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999976191"
+    }
+  }, {
+    "fullUrl": "urn:uuid:adad0cff-5bc3-33b9-8064-56987fbf438c",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "adad0cff-5bc3-33b9-8064-56987fbf438c",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 21
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999986091"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Fritsch593",
+        "given": [ "Sina65" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Sina65.Fritsch593@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Grieskirchner Straße 6" ],
+        "city": "Bad Schallerbach",
+        "state": "Oberösterreich",
+        "postalCode": "4701",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999986091"
+    }
+  }, {
+    "fullUrl": "urn:uuid:4eb03279-db8a-33b2-8e4e-145eef4694f6",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "4eb03279-db8a-33b2-8e4e-145eef4694f6",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 222
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999981795"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Roberts511",
+        "given": [ "Clay913" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Clay913.Roberts511@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Sonnenweg 10" ],
+        "city": "Weng im Innkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4952",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999981795"
+    }
+  }, {
+    "fullUrl": "urn:uuid:8f2dd713-dffa-341b-9194-417697796ed8",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "8f2dd713-dffa-341b-9194-417697796ed8",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 83
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999989293"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Friesen796",
+        "given": [ "Rueben647" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Rueben647.Friesen796@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfstraße 19" ],
+        "city": "Pierbach",
+        "state": "Oberösterreich",
+        "postalCode": "4282",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999989293"
+    }
+  }, {
+    "fullUrl": "urn:uuid:474947f7-9025-3021-8cf6-3ef338f418ac",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "474947f7-9025-3021-8cf6-3ef338f418ac",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 228
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999984799"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Daugherty69",
+        "given": [ "Merrilee429" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Merrilee429.Daugherty69@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Miller von Aichholzstraße 49" ],
+        "city": "Gmunden",
+        "state": "Oberösterreich",
+        "postalCode": "4810",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999984799"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6cb95ee0-12d9-3596-a925-a6a4e1bdaa4d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "6cb95ee0-12d9-3596-a925-a6a4e1bdaa4d",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 35
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999975797"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Howe413",
+        "given": [ "Evangeline16" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Evangeline16.Howe413@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfstraße 19" ],
+        "city": "Pierbach",
+        "state": "Oberösterreich",
+        "postalCode": "4282",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999975797"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d1a7b172-0857-30c0-b92e-0e918ff12e46",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d1a7b172-0857-30c0-b92e-0e918ff12e46",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999961698"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Goyette777",
+        "given": [ "Bertram873" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Bertram873.Goyette777@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kranholzstraße 3" ],
+        "city": "Kirchberg-Thening",
+        "state": "Oberösterreich",
+        "postalCode": "4062",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999961698"
+    }
+  }, {
+    "fullUrl": "urn:uuid:9c1462b9-ad37-3990-953e-06c36bc5a9c5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "9c1462b9-ad37-3990-953e-06c36bc5a9c5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 148
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999998393"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kuphal363",
+        "given": [ "Palmer257" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Palmer257.Kuphal363@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dr. Mayer Straße 8-10" ],
+        "city": "Bad Ischl",
+        "state": "Oberösterreich",
+        "postalCode": "4820",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999998393"
+    }
+  }, {
+    "fullUrl": "urn:uuid:cb2312a2-4f9a-3ae3-b1c0-2ba5b52702a9",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cb2312a2-4f9a-3ae3-b1c0-2ba5b52702a9",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 184
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999998690"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Okuneva707",
+        "given": [ "Almeda560" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Almeda560.Okuneva707@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Fadingerstraße 1" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999998690"
+    }
+  }, {
+    "fullUrl": "urn:uuid:23d92c0e-b508-3b57-833c-51ffcd5183a2",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "23d92c0e-b508-3b57-833c-51ffcd5183a2",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 32
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999978692"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bechtelar572",
+        "given": [ "Josh874" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Josh874.Bechtelar572@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Harterfeldstraße 31" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999978692"
+    }
+  }, {
+    "fullUrl": "urn:uuid:872ec46c-40a2-3f22-b082-c64f015446b5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "872ec46c-40a2-3f22-b082-c64f015446b5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 34
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999968594"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "O'Keefe54",
+        "given": [ "Juan88" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Juan88.O'Keefe54@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Liebenau 128" ],
+        "city": "Liebenau",
+        "state": "Oberösterreich",
+        "postalCode": "4252",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999968594"
+    }
+  }, {
+    "fullUrl": "urn:uuid:800b5941-c0b1-386b-bd57-53f31fd13e41",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "800b5941-c0b1-386b-bd57-53f31fd13e41",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 31
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999981290"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Wintheiser220",
+        "given": [ "Mathilde204" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Mathilde204.Wintheiser220@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Laudachweg 5" ],
+        "city": "Vorchdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4655",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999981290"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3889cabe-fd60-343c-b27e-9d7a0c7bc9a6",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3889cabe-fd60-343c-b27e-9d7a0c7bc9a6",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 113
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999996090"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Weber641",
+        "given": [ "Chu728" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Chu728.Weber641@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Puchberger Straße 41" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999996090"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d4b4c0c7-f4b0-382f-868e-d3b2256faefd",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d4b4c0c7-f4b0-382f-868e-d3b2256faefd",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 186
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999970590"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Williamson769",
+        "given": [ "Harland508" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Harland508.Williamson769@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999970590"
+    }
+  }, {
+    "fullUrl": "urn:uuid:90d90c37-f9ab-3ecb-9cc6-5cb1ef3b30e0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "90d90c37-f9ab-3ecb-9cc6-5cb1ef3b30e0",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 29
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999993493"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Klein929",
+        "given": [ "Kayla528" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kayla528.Klein929@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Römerstraße 20" ],
+        "city": "Vorchdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4655",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999993493"
+    }
+  }, {
+    "fullUrl": "urn:uuid:cd949bdf-63d4-3df7-83ac-e0ccebbca4df",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cd949bdf-63d4-3df7-83ac-e0ccebbca4df",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 27
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999987495"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Davis923",
+        "given": [ "Margrett284" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Margrett284.Davis923@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kirchenfeld 43" ],
+        "city": "Kefermarkt",
+        "state": "Oberösterreich",
+        "postalCode": "4292",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999987495"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6150e934-601f-3468-8464-6a4c8d3924be",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "6150e934-601f-3468-8464-6a4c8d3924be",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 17
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999965798"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Pacocha935",
+        "given": [ "Junior695" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Junior695.Pacocha935@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Georgestraße 27" ],
+        "city": "Langenstein",
+        "state": "Oberösterreich",
+        "postalCode": "4222",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999965798"
+    }
+  }, {
+    "fullUrl": "urn:uuid:510a58ce-96f0-3a37-aa69-7520010b9935",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "510a58ce-96f0-3a37-aa69-7520010b9935",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 154
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999999698"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Wuckert783",
+        "given": [ "Bobbye345" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Bobbye345.Wuckert783@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999999698"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e59d9c65-e678-3c4b-aa48-62d57f65a242",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e59d9c65-e678-3c4b-aa48-62d57f65a242",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999965897"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kub800",
+        "given": [ "Isaac321" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Isaac321.Kub800@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Albrechtstraße 24a" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999965897"
+    }
+  }, {
+    "fullUrl": "urn:uuid:1664072d-5056-3e17-9a8d-3dcd24b62251",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "1664072d-5056-3e17-9a8d-3dcd24b62251",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 28
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999971796"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Murray856",
+        "given": [ "Staci390" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Staci390.Murray856@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schloßberg 1" ],
+        "city": "Ried im Innkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4910",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999971796"
+    }
+  }, {
+    "fullUrl": "urn:uuid:ac3934c4-8a78-3970-981b-fb7fdb616793",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "ac3934c4-8a78-3970-981b-fb7fdb616793",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 365
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999998294"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rippin620",
+        "given": [ "Sam879" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Sam879.Rippin620@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Miller von Aichholzstraße 49" ],
+        "city": "Gmunden",
+        "state": "Oberösterreich",
+        "postalCode": "4810",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999998294"
+    }
+  }, {
+    "fullUrl": "urn:uuid:90d71e0e-fbf1-3132-a6ea-46f74d3a8440",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "90d71e0e-fbf1-3132-a6ea-46f74d3a8440",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 58
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999979997"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Trantow673",
+        "given": [ "Gino587" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Gino587.Trantow673@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Römerstraße 20" ],
+        "city": "Vorchdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4655",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999979997"
+    }
+  }, {
+    "fullUrl": "urn:uuid:25feee29-c3fe-39db-ac6b-aec66f37c735",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "25feee29-c3fe-39db-ac6b-aec66f37c735",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 99
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999994699"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Casper496",
+        "given": [ "Delcie812" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Delcie812.Casper496@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Birkenweg 14" ],
+        "city": "Neustift im Mühlkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4143",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999994699"
+    }
+  }, {
+    "fullUrl": "urn:uuid:cbabe79b-d0ca-3cd3-bcc8-c126aae1cde5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cbabe79b-d0ca-3cd3-bcc8-c126aae1cde5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999964692"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Medhurst46",
+        "given": [ "Jesse626" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Jesse626.Medhurst46@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Stiftsfeld 19" ],
+        "city": "Fischlham",
+        "state": "Oberösterreich",
+        "postalCode": "4652",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999964692"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d902af8a-a1a0-326e-b97a-75f0e6e61470",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d902af8a-a1a0-326e-b97a-75f0e6e61470",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 7
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999961193"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Streich926",
+        "given": [ "Eugenio846" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Eugenio846.Streich926@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Steyr",
+        "state": "Oberösterreich",
+        "postalCode": "4400",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999961193"
+    }
+  }, {
+    "fullUrl": "urn:uuid:f91c99ad-15f9-3725-b6b5-8a850dab0e56",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "f91c99ad-15f9-3725-b6b5-8a850dab0e56",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 697
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999995696"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Ankunding277",
+        "given": [ "Vella930" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Vella930.Ankunding277@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Larnhauserweg 2" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999995696"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6b7fbdb5-d333-32c0-8744-bb53266c8f45",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "6b7fbdb5-d333-32c0-8744-bb53266c8f45",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 224
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999989194"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Romaguera67",
+        "given": [ "Gail741" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Gail741.Romaguera67@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schulstraße 6" ],
+        "city": "Kremsmünster",
+        "state": "Oberösterreich",
+        "postalCode": "4550",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999989194"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d35a5f4e-98a7-3eb1-a840-2876a7749adc",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d35a5f4e-98a7-3eb1-a840-2876a7749adc",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 63
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999974691"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Bogisich202",
+        "given": [ "Codi873" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Codi873.Bogisich202@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Steyr",
+        "state": "Oberösterreich",
+        "postalCode": "4400",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999974691"
+    }
+  }, {
+    "fullUrl": "urn:uuid:a61594bf-2e2a-3c07-b0b0-1a28ea5d2193",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "a61594bf-2e2a-3c07-b0b0-1a28ea5d2193",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999969899"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schmidt332",
+        "given": [ "Arturo47" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Arturo47.Schmidt332@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Pratsdorfstraße 25" ],
+        "city": "Pettenbach",
+        "state": "Oberösterreich",
+        "postalCode": "4643",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999969899"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b04540bd-8b20-3a97-8dbe-d654956f4935",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b04540bd-8b20-3a97-8dbe-d654956f4935",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 26
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999964890"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Gerhold939",
+        "given": [ "Rex53" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Rex53.Gerhold939@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Lederergasse 12" ],
+        "city": "Lembach im Mühlkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4132",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999964890"
+    }
+  }, {
+    "fullUrl": "urn:uuid:aa1ef5c4-f0e9-391e-a78b-bbdac8db100a",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "aa1ef5c4-f0e9-391e-a78b-bbdac8db100a",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 5
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991091"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Wunsch504",
+        "given": [ "Sherman440" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Sherman440.Wunsch504@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Bauordenstraße 23" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991091"
+    }
+  }, {
+    "fullUrl": "urn:uuid:099c9c03-df91-3ae8-a7c8-ccb05d33ec5e",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "099c9c03-df91-3ae8-a7c8-ccb05d33ec5e",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999965392"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Stamm704",
+        "given": [ "Moshe758" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Moshe758.Stamm704@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Rainerweg 5" ],
+        "city": "Frankenburg am Hausruck",
+        "state": "Oberösterreich",
+        "postalCode": "4873",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999965392"
+    }
+  }, {
+    "fullUrl": "urn:uuid:aba6fca7-bbc9-31b8-a943-2ab873db2d4e",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "aba6fca7-bbc9-31b8-a943-2ab873db2d4e",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999988790"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rippin620",
+        "given": [ "Jerrell6" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Jerrell6.Rippin620@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfplatz 2" ],
+        "city": "Klaffer am Hochficht",
+        "state": "Oberösterreich",
+        "postalCode": "4163",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999988790"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d7a0b2b2-7843-3706-b46c-36243c758c15",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d7a0b2b2-7843-3706-b46c-36243c758c15",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 43
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999984690"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Dooley940",
+        "given": [ "Pattie91" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Pattie91.Dooley940@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Schärding",
+        "state": "Oberösterreich",
+        "postalCode": "4780",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999984690"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e8a35032-d858-3281-9588-21f984c30f31",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e8a35032-d858-3281-9588-21f984c30f31",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 8
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999971697"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Strosin214",
+        "given": [ "Kurtis994" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kurtis994.Strosin214@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Fadingerstraße 1" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999971697"
+    }
+  }, {
+    "fullUrl": "urn:uuid:42b6124a-15bd-322b-9fb0-50299385727e",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "42b6124a-15bd-322b-9fb0-50299385727e",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999962894"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Stiedemann542",
+        "given": [ "Erwin847" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Erwin847.Stiedemann542@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hartbergerstraße 1" ],
+        "city": "Buchkirchen",
+        "state": "Oberösterreich",
+        "postalCode": "4611",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999962894"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5ebd4e00-ff72-3f53-a627-2e11f49c99b8",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5ebd4e00-ff72-3f53-a627-2e11f49c99b8",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999972596"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Miller503",
+        "given": [ "Elvia127" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Elvia127.Miller503@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Grieskirchner Straße 6" ],
+        "city": "Bad Schallerbach",
+        "state": "Oberösterreich",
+        "postalCode": "4701",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999972596"
+    }
+  }, {
+    "fullUrl": "urn:uuid:639dc677-32f5-30c4-a4eb-2c2ef229fff1",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "639dc677-32f5-30c4-a4eb-2c2ef229fff1",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 17
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999983296"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Howe413",
+        "given": [ "Noe500" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Noe500.Howe413@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Parkstraße 30" ],
+        "city": "Kirchdorf an der Krems",
+        "state": "Oberösterreich",
+        "postalCode": "4560",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999983296"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5ec9e1a7-598b-3b28-ae72-6820ea54ba22",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5ec9e1a7-598b-3b28-ae72-6820ea54ba22",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999971192"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Herzog843",
+        "given": [ "Yvette315" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Yvette315.Herzog843@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Schärding",
+        "state": "Oberösterreich",
+        "postalCode": "4780",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999971192"
+    }
+  }, {
+    "fullUrl": "urn:uuid:6225db0d-89df-377e-aac5-3eb90019f40f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "6225db0d-89df-377e-aac5-3eb90019f40f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 189
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999963991"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Barton704",
+        "given": [ "Vito638" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Vito638.Barton704@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kobernaußerwaldstraße 22" ],
+        "city": "Lengau",
+        "state": "Oberösterreich",
+        "postalCode": "5212",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999963991"
+    }
+  }, {
+    "fullUrl": "urn:uuid:74310823-17fc-3cec-a163-a9f8317e4f82",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "74310823-17fc-3cec-a163-a9f8317e4f82",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 18
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999967091"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Beier427",
+        "given": [ "Warren653" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Warren653.Beier427@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Holzheimer Straße 104" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999967091"
+    }
+  }, {
+    "fullUrl": "urn:uuid:8de13208-c8c0-3f72-8b63-0194bd6a2c59",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "8de13208-c8c0-3f72-8b63-0194bd6a2c59",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 89
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999980599"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Cummings51",
+        "given": [ "Delorse592" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Delorse592.Cummings51@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Holzheimer Straße 104" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999980599"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7b9d1d6e-ca57-32c1-9ac6-2b3760322cb0",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7b9d1d6e-ca57-32c1-9ac6-2b3760322cb0",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 34
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999982595"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Gutmann970",
+        "given": [ "Rosemarie149" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Rosemarie149.Gutmann970@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Puchberger Straße 41" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999982595"
+    }
+  }, {
+    "fullUrl": "urn:uuid:baf04565-2b19-371b-9eec-fb5d6c019212",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "baf04565-2b19-371b-9eec-fb5d6c019212",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1030
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999995290"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Denesik803",
+        "given": [ "Elayne206" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Elayne206.Denesik803@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Sonnenweg 10" ],
+        "city": "Weng im Innkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4952",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999995290"
+    }
+  }, {
+    "fullUrl": "urn:uuid:81a6b574-20b3-3d72-ac5d-78a234920a66",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "81a6b574-20b3-3d72-ac5d-78a234920a66",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 38
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999978890"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Mueller846",
+        "given": [ "Garth972" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Garth972.Mueller846@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Rainerweg 5" ],
+        "city": "Frankenburg am Hausruck",
+        "state": "Oberösterreich",
+        "postalCode": "4873",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999978890"
+    }
+  }, {
+    "fullUrl": "urn:uuid:9bdbff33-e6b8-39d6-a548-e29872e490d1",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "9bdbff33-e6b8-39d6-a548-e29872e490d1",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 52
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999994293"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Dooley940",
+        "given": [ "Agnes294" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Agnes294.Dooley940@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Römerstraße 5" ],
+        "city": "Schwanenstadt",
+        "state": "Oberösterreich",
+        "postalCode": "4690",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999994293"
+    }
+  }, {
+    "fullUrl": "urn:uuid:ae8fa272-3714-34d4-81b5-67f5dbf8be04",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "ae8fa272-3714-34d4-81b5-67f5dbf8be04",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 37
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999975193"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Boehm581",
+        "given": [ "Dane516" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Dane516.Boehm581@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kranholzstraße 3" ],
+        "city": "Kirchberg-Thening",
+        "state": "Oberösterreich",
+        "postalCode": "4062",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999975193"
+    }
+  }, {
+    "fullUrl": "urn:uuid:76234faa-6123-3df0-b671-1327e15113f5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "76234faa-6123-3df0-b671-1327e15113f5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 6
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999968198"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Reynolds644",
+        "given": [ "Daysi106" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Daysi106.Reynolds644@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfstraße 8" ],
+        "city": "Herzogsdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4175",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999968198"
+    }
+  }, {
+    "fullUrl": "urn:uuid:84852549-213d-3588-b4dd-c7766d5ac178",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "84852549-213d-3588-b4dd-c7766d5ac178",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 7
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999995092"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Leannon79",
+        "given": [ "Cristi782" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Cristi782.Leannon79@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Riegerting 9" ],
+        "city": "Mehrnbach",
+        "state": "Oberösterreich",
+        "postalCode": "4941",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999995092"
+    }
+  }, {
+    "fullUrl": "urn:uuid:06c51105-0cd4-3a81-9491-5ae094a2d42a",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "06c51105-0cd4-3a81-9491-5ae094a2d42a",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 106
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999988394"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Abshire638",
+        "given": [ "Brendan864" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Brendan864.Abshire638@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kaiser-Josef-Platz 52" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999988394"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e609f2c3-2763-3814-b436-ee534a61a150",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e609f2c3-2763-3814-b436-ee534a61a150",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999966499"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Roob72",
+        "given": [ "Noe500" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Noe500.Roob72@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Römerstraße 20" ],
+        "city": "Vorchdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4655",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999966499"
+    }
+  }, {
+    "fullUrl": "urn:uuid:a50f6655-b824-34e9-a8ff-bb96cb98da16",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "a50f6655-b824-34e9-a8ff-bb96cb98da16",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 8
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999984294"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Huel628",
+        "given": [ "Geraldo282" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Geraldo282.Huel628@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "nan 2" ],
+        "city": "Weyer",
+        "state": "Oberösterreich",
+        "postalCode": "3335",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999984294"
+    }
+  }, {
+    "fullUrl": "urn:uuid:63f2247d-5439-35bb-a582-70632a084974",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "63f2247d-5439-35bb-a582-70632a084974",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 17
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999979799"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Farrell962",
+        "given": [ "Fritz267" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Fritz267.Farrell962@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Grüner Weg 16" ],
+        "city": "Sankt Georgen im Attergau",
+        "state": "Oberösterreich",
+        "postalCode": "4880",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999979799"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e6899106-13eb-3a7e-9066-526700a82d72",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e6899106-13eb-3a7e-9066-526700a82d72",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999969097"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kshlerin58",
+        "given": [ "Emmanuel930" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Emmanuel930.Kshlerin58@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Puchberger Straße 41" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999969097"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7ef63fa2-40b5-3da4-b049-0593557af01f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7ef63fa2-40b5-3da4-b049-0593557af01f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999965491"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hayes766",
+        "given": [ "Alvin56" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Alvin56.Hayes766@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Stocket 8" ],
+        "city": "Sankt Marienkirchen am Hausruck",
+        "state": "Oberösterreich",
+        "postalCode": "4926",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999965491"
+    }
+  }, {
+    "fullUrl": "urn:uuid:86c705ce-99c7-39da-9b5b-ab9465fc515b",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "86c705ce-99c7-39da-9b5b-ab9465fc515b",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 31
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999981191"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Koss676",
+        "given": [ "Lezlie553" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Lezlie553.Koss676@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Birkenweg 14" ],
+        "city": "Neustift im Mühlkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4143",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999981191"
+    }
+  }, {
+    "fullUrl": "urn:uuid:cbe30ac2-2793-34b9-8dc6-f3284a561bba",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cbe30ac2-2793-34b9-8dc6-f3284a561bba",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 46
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999974899"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "O'Kon634",
+        "given": [ "Shayne60" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Shayne60.O'Kon634@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kaiser-Josef-Platz 52" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999974899"
+    }
+  }, {
+    "fullUrl": "urn:uuid:a72b92a9-a2f8-345a-b58f-6d35a24e9cee",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "a72b92a9-a2f8-345a-b58f-6d35a24e9cee",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999964593"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Boyle917",
+        "given": [ "Elijah719" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Elijah719.Boyle917@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Bahnhofstraße 27" ],
+        "city": "Altheim",
+        "state": "Oberösterreich",
+        "postalCode": "4950",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999964593"
+    }
+  }, {
+    "fullUrl": "urn:uuid:2d629378-1df5-367a-849b-38de7d9d1504",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "2d629378-1df5-367a-849b-38de7d9d1504",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 19
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999976498"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Crona259",
+        "given": [ "Colin861" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Colin861.Crona259@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Altbauerstraße 13" ],
+        "city": "Ansfelden",
+        "state": "Oberösterreich",
+        "postalCode": "4052",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999976498"
+    }
+  }, {
+    "fullUrl": "urn:uuid:94744c38-f7ff-3161-9a31-3782858d2e57",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "94744c38-f7ff-3161-9a31-3782858d2e57",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 101
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999986695"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Smitham825",
+        "given": [ "Minh326" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Minh326.Smitham825@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Ostermiething",
+        "state": "Oberösterreich",
+        "postalCode": "5121",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999986695"
+    }
+  }, {
+    "fullUrl": "urn:uuid:4a50b885-a152-3f99-b06a-883e5036be18",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "4a50b885-a152-3f99-b06a-883e5036be18",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 28
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999998799"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hane680",
+        "given": [ "Cira533" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Cira533.Hane680@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schloßberg 1" ],
+        "city": "Ried im Innkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4910",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999998799"
+    }
+  }, {
+    "fullUrl": "urn:uuid:33710c3b-f376-38fe-8809-8133163dbb86",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "33710c3b-f376-38fe-8809-8133163dbb86",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 76
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999985390"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Klein929",
+        "given": [ "Josef103" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Josef103.Klein929@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Neustraße 14" ],
+        "city": "Sierning",
+        "state": "Oberösterreich",
+        "postalCode": "4522",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999985390"
+    }
+  }, {
+    "fullUrl": "urn:uuid:68df99cd-9ea8-3f76-bc18-528a155e07fd",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "68df99cd-9ea8-3f76-bc18-528a155e07fd",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 13
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999968693"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Lynch190",
+        "given": [ "Stuart913" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Stuart913.Lynch190@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Larnhauserweg 2" ],
+        "city": "Leonding",
+        "state": "Oberösterreich",
+        "postalCode": "4060",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999968693"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b8e267f4-e6b8-3fcd-842b-5a5c46404145",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b8e267f4-e6b8-3fcd-842b-5a5c46404145",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 113
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999989699"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "D'Amore443",
+        "given": [ "Donnell534" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Donnell534.D'Amore443@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "nan 43" ],
+        "city": "Enns",
+        "state": "Oberösterreich",
+        "postalCode": "4470",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999989699"
+    }
+  }, {
+    "fullUrl": "urn:uuid:c05bcf1d-5df1-30f8-8b2f-507a862a5e54",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "c05bcf1d-5df1-30f8-8b2f-507a862a5e54",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999966093"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Skiles927",
+        "given": [ "Elias404" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Elias404.Skiles927@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Sartrestraße 11" ],
+        "city": "Pucking",
+        "state": "Oberösterreich",
+        "postalCode": "4055",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999966093"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7346c400-bb83-363a-a492-efe78fe1c0bd",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7346c400-bb83-363a-a492-efe78fe1c0bd",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999964395"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Keeling57",
+        "given": [ "Eddie505" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Eddie505.Keeling57@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Ringstraße 13" ],
+        "city": "Sankt Leonhard bei Freistadt",
+        "state": "Oberösterreich",
+        "postalCode": "4294",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999964395"
+    }
+  }, {
+    "fullUrl": "urn:uuid:73b8e007-8a2e-3563-be64-0de78fcaeae6",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "73b8e007-8a2e-3563-be64-0de78fcaeae6",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 392
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999992792"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Koepp521",
+        "given": [ "Omer483" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Omer483.Koepp521@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Georgestraße 27" ],
+        "city": "Langenstein",
+        "state": "Oberösterreich",
+        "postalCode": "4222",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999992792"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d0c00282-68f0-396d-a229-e4fe428e667d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d0c00282-68f0-396d-a229-e4fe428e667d",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999988097"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Pacocha935",
+        "given": [ "Jackelyn13" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Jackelyn13.Pacocha935@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Herrenstraße 54" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999988097"
+    }
+  }, {
+    "fullUrl": "urn:uuid:04f460d3-2264-3b7e-bc37-5517671ab4ed",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "04f460d3-2264-3b7e-bc37-5517671ab4ed",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 745
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999987693"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Rohan584",
+        "given": [ "Theo630" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Theo630.Rohan584@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Waltherstraße 5" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999987693"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3fca3405-f517-3f12-b847-cad883ba8ba5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3fca3405-f517-3f12-b847-cad883ba8ba5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 19
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999981597"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Huel628",
+        "given": [ "Regena252" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Regena252.Huel628@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Riegerting 9" ],
+        "city": "Mehrnbach",
+        "state": "Oberösterreich",
+        "postalCode": "4941",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999981597"
+    }
+  }, {
+    "fullUrl": "urn:uuid:f23bee55-7340-3461-a3d0-8c9167c8b119",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "f23bee55-7340-3461-a3d0-8c9167c8b119",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 33
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999970996"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Tillman293",
+        "given": [ "Rueben647" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Rueben647.Tillman293@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hausmanningerstraße 8" ],
+        "city": "Kirchdorf an der Krems",
+        "state": "Oberösterreich",
+        "postalCode": "4560",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999970996"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d0fde13d-e074-3672-b3b7-060ebbf8ef79",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d0fde13d-e074-3672-b3b7-060ebbf8ef79",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 60
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999986190"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Ankunding277",
+        "given": [ "Terri848" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Terri848.Ankunding277@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999986190"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e6141ef4-8e6e-3872-9754-b901424beebb",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e6141ef4-8e6e-3872-9754-b901424beebb",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 65
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999991596"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Schiller186",
+        "given": [ "Adrienne302" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Adrienne302.Schiller186@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Bahnhofstraße 27" ],
+        "city": "Altheim",
+        "state": "Oberösterreich",
+        "postalCode": "4950",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999991596"
+    }
+  }, {
+    "fullUrl": "urn:uuid:18e11811-de85-3229-9e35-38ac351c7496",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "18e11811-de85-3229-9e35-38ac351c7496",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 42
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999988691"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Roob72",
+        "given": [ "Kristopher775" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Kristopher775.Roob72@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kranholzstraße 3" ],
+        "city": "Kirchberg-Thening",
+        "state": "Oberösterreich",
+        "postalCode": "4062",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999988691"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d3a0a963-7bc4-35a5-94c1-5982758b05dd",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d3a0a963-7bc4-35a5-94c1-5982758b05dd",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 78
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999987396"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "McKenzie376",
+        "given": [ "Harley673" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Harley673.McKenzie376@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Taxlbergstraße 1" ],
+        "city": "Steinhaus",
+        "state": "Oberösterreich",
+        "postalCode": "4641",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999987396"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7a0dbb33-6754-36e0-b6be-14d133f41691",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7a0dbb33-6754-36e0-b6be-14d133f41691",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 231
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999978395"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Toy286",
+        "given": [ "Cherish740" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Cherish740.Toy286@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Lederergasse 12" ],
+        "city": "Lembach im Mühlkreis",
+        "state": "Oberösterreich",
+        "postalCode": "4132",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999978395"
+    }
+  }, {
+    "fullUrl": "urn:uuid:d2bb7266-f720-3b6e-9902-6024602b6a38",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "d2bb7266-f720-3b6e-9902-6024602b6a38",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 1
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999962993"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Mosciski958",
+        "given": [ "Fernande593" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Fernande593.Mosciski958@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Altbauerstraße 13" ],
+        "city": "Ansfelden",
+        "state": "Oberösterreich",
+        "postalCode": "4052",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999962993"
+    }
+  }, {
+    "fullUrl": "urn:uuid:cc9cc0dc-b356-309a-b06a-4296eca7f5be",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "cc9cc0dc-b356-309a-b06a-4296eca7f5be",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 20
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999999599"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Blick895",
+        "given": [ "Domenic627" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Domenic627.Blick895@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Grieskirchner Straße 6" ],
+        "city": "Bad Schallerbach",
+        "state": "Oberösterreich",
+        "postalCode": "4701",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999999599"
+    }
+  }, {
+    "fullUrl": "urn:uuid:4d48a073-d573-3151-8c18-69254e6fc201",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "4d48a073-d573-3151-8c18-69254e6fc201",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999962696"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Predovic534",
+        "given": [ "Cecily421" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Cecily421.Predovic534@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "nan 43" ],
+        "city": "Enns",
+        "state": "Oberösterreich",
+        "postalCode": "4470",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999962696"
+    }
+  }, {
+    "fullUrl": "urn:uuid:57181c50-7d27-3ca7-9da2-0beef6922985",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "57181c50-7d27-3ca7-9da2-0beef6922985",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 2
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999964197"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Daniel959",
+        "given": [ "Sid118" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Sid118.Daniel959@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hauptstraße 17" ],
+        "city": "Schiedlberg",
+        "state": "Oberösterreich",
+        "postalCode": "4521",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999964197"
+    }
+  }, {
+    "fullUrl": "urn:uuid:9bbca14a-afbe-3ddf-8b00-f5f6c6a1349f",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "9bbca14a-afbe-3ddf-8b00-f5f6c6a1349f",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 25
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999974097"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Hauck852",
+        "given": [ "Raleigh478" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Raleigh478.Hauck852@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Traunuferstraße 9a" ],
+        "city": "Ansfelden",
+        "state": "Oberösterreich",
+        "postalCode": "4052",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999974097"
+    }
+  }, {
+    "fullUrl": "urn:uuid:7be80b4d-91cd-361c-a072-fcff83d340ed",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7be80b4d-91cd-361c-a072-fcff83d340ed",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 40
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999973990"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kemmer137",
+        "given": [ "Hank686" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Hank686.Kemmer137@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kirchenfeld 43" ],
+        "city": "Kefermarkt",
+        "state": "Oberösterreich",
+        "postalCode": "4292",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999973990"
+    }
+  }, {
+    "fullUrl": "urn:uuid:63dd9aad-61b4-3749-9b36-98168e4e3ef4",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "63dd9aad-61b4-3749-9b36-98168e4e3ef4",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 271
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999997296"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Langosh790",
+        "given": [ "Harlan808" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Harlan808.Langosh790@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Schulstraße 11" ],
+        "city": "Münzbach",
+        "state": "Oberösterreich",
+        "postalCode": "4323",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999997296"
+    }
+  }, {
+    "fullUrl": "urn:uuid:b92032be-ba98-36bd-bd64-37516208c3e5",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "b92032be-ba98-36bd-bd64-37516208c3e5",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 33
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999977892"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Gutmann970",
+        "given": [ "Thomasena108" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Thomasena108.Gutmann970@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Ringstraße 13" ],
+        "city": "Sankt Leonhard bei Freistadt",
+        "state": "Oberösterreich",
+        "postalCode": "4294",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999977892"
+    }
+  }, {
+    "fullUrl": "urn:uuid:5473f713-44b4-34d6-9622-34fb85a6bbcb",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "5473f713-44b4-34d6-9622-34fb85a6bbcb",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 7
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999996793"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Abbott774",
+        "given": [ "Bennie663" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Bennie663.Abbott774@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Parkstraße 30" ],
+        "city": "Kirchdorf an der Krems",
+        "state": "Oberösterreich",
+        "postalCode": "4560",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999996793"
+    }
+  }, {
+    "fullUrl": "urn:uuid:8ea62b57-0bc7-33a9-a976-c87379dd8704",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "8ea62b57-0bc7-33a9-a976-c87379dd8704",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 505
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999990994"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kuhlman484",
+        "given": [ "Junior695" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Junior695.Kuhlman484@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Kobernaußerwaldstraße 22" ],
+        "city": "Lengau",
+        "state": "Oberösterreich",
+        "postalCode": "5212",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999990994"
+    }
+  }, {
+    "fullUrl": "urn:uuid:da227f53-cf73-354c-a30a-7b676c9be3ad",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "da227f53-cf73-354c-a30a-7b676c9be3ad",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 192
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999985697"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Moore224",
+        "given": [ "Allan198" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Allan198.Moore224@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Wagner-Jauregg-Weg 15" ],
+        "city": "Linz",
+        "state": "Oberösterreich",
+        "postalCode": "4020",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999985697"
+    }
+  }, {
+    "fullUrl": "urn:uuid:3ed5b2e4-e718-383d-80e4-f8baf3f031cf",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "3ed5b2e4-e718-383d-80e4-f8baf3f031cf",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 78
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999978197"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Nicolas769",
+        "given": [ "Raymond398" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Raymond398.Nicolas769@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Stiftsfeld 19" ],
+        "city": "Fischlham",
+        "state": "Oberösterreich",
+        "postalCode": "4652",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999978197"
+    }
+  }, {
+    "fullUrl": "urn:uuid:58ea9ef2-7a2a-32e0-b597-2d37fb028939",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "58ea9ef2-7a2a-32e0-b597-2d37fb028939",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 22
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999977595"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Considine820",
+        "given": [ "Raul814" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Raul814.Considine820@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Bauordenstraße 23" ],
+        "city": "Wels",
+        "state": "Oberösterreich",
+        "postalCode": "4600",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999977595"
+    }
+  }, {
+    "fullUrl": "urn:uuid:60cc5b75-8836-3dea-9b18-0cc50c90e373",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "60cc5b75-8836-3dea-9b18-0cc50c90e373",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 266
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999995191"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Kutch271",
+        "given": [ "Chang901" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Chang901.Kutch271@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfstraße 8" ],
+        "city": "Herzogsdorf",
+        "state": "Oberösterreich",
+        "postalCode": "4175",
+        "country": "AT"
+      } ],
+      "gender": "male"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999995191"
+    }
+  }, {
+    "fullUrl": "urn:uuid:382be9a1-10af-3376-aee6-5a3f24bab71c",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "382be9a1-10af-3376-aee6-5a3f24bab71c",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 7
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999975292"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Mayert710",
+        "given": [ "Tristan353" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Tristan353.Mayert710@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Dorfplatz 2" ],
+        "city": "Klaffer am Hochficht",
+        "state": "Oberösterreich",
+        "postalCode": "4163",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999975292"
+    }
+  }, {
+    "fullUrl": "urn:uuid:e3d0aa6f-e51c-3284-87ec-6884f53a530a",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "e3d0aa6f-e51c-3284-87ec-6884f53a530a",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 45
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999982496"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Nicolas769",
+        "given": [ "Ellie521" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Ellie521.Nicolas769@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Breitenangerstraße 11" ],
+        "city": "Grein",
+        "state": "Oberösterreich",
+        "postalCode": "4360",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999982496"
+    }
+  }, {
+    "fullUrl": "urn:uuid:53e8227f-1539-3120-89f7-c494f173613a",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "53e8227f-1539-3120-89f7-c494f173613a",
+      "extension": [ {
+        "url": "http://synthetichealth.github.io/synthea/utilization-encounters-extension",
+        "valueInteger": 111
+      } ],
+      "identifier": [ {
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "9999977694"
+      } ],
+      "active": true,
+      "name": [ {
+        "family": "Shields502",
+        "given": [ "Tamera164" ],
+        "prefix": [ "Dr." ]
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "Tamera164.Shields502@example.com",
+        "use": "work"
+      } ],
+      "address": [ {
+        "line": [ "Hauptstraße 17" ],
+        "city": "Schiedlberg",
+        "state": "Oberösterreich",
+        "postalCode": "4521",
+        "country": "AT"
+      } ],
+      "gender": "female"
+    },
+    "request": {
+      "method": "POST",
+      "url": "Practitioner",
+      "ifNoneExist": "identifier=http://hl7.org/fhir/sid/us-npi|9999977694"
+    }
+  } ]
+}

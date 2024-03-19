@@ -1,0 +1,16 @@
+POST http://localhost:8080/fhir/
+Content-Type: application/fhir+json
+
+< hospitalInformation1678109614489.json
+
+###
+POST http://localhost:8080/fhir/
+Content-Type: application/fhir+json
+
+< practitionerInformation1678109614489.json
+
+###
+POST http://localhost:8080/fhir/
+Content-Type: application/fhir+json
+
+< Adah626_Jona712_Boyle917_24b57c3e-fa6b-23ac-fc6a-56423dc71614.json
