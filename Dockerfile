@@ -4,9 +4,15 @@ WORKDIR /tmp/hapi-fhir-jpaserver-starter
 ARG OPENTELEMETRY_JAVA_AGENT_VERSION=1.17.0
 RUN curl -LSsO https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v${OPENTELEMETRY_JAVA_AGENT_VERSION}/opentelemetry-javaagent.jar
 
+
 COPY pom.xml .
 COPY server.xml .
-RUN mvn -ntp dependency:go-offline
+
+# copies missing jar file
+COPY libs/fhir-audit-event-to-xes-1.1.3-SNAPSHOT.jar /tmp/hapi-fhir-jpaserver-starter/libs/
+RUN mvn install:install-file -Dfile=/tmp/hapi-fhir-jpaserver-starter/libs/fhir-audit-event-to-xes-1.1.3-SNAPSHOT.jar -DgroupId=science.aist -DartifactId=fhir-audit-event-to-xes -Dversion=1.1.3-SNAPSHOT -Dpackaging=jar
+
+#RUN mvn -ntp dependency:go-offline
 
 COPY src/ /tmp/hapi-fhir-jpaserver-starter/src/
 RUN mvn clean install -DskipTests -Djdk.lang.Process.launchMechanism=vfork

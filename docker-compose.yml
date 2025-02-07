@@ -16,3 +16,6 @@ services:
       POSTGRES_DB: hapi
     ports:
       - "5432:5432"
+networks:
+  fhir-net:
+    external: true

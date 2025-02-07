@@ -32,7 +32,7 @@ public class AbstractAuditEventResourceProvider {
 
 	protected void toXes(String rootElement, List<AuditEvent> collect, String traceConceptNameResolverPath, HttpServletResponse theServletResponse) throws IOException {
 		if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
-			traceConceptNameResolverPath = "getPatient.getReference";
+			traceConceptNameResolverPath = "getPatient.getIdentifier.getValue";
 		}
 
 		var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
