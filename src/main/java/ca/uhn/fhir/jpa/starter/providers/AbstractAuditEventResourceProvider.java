@@ -31,16 +31,26 @@ import java.util.List;
 public class AbstractAuditEventResourceProvider {
 
 	protected void toXes(String rootElement, List<AuditEvent> collect, String traceConceptNameResolverPath, HttpServletResponse theServletResponse) throws IOException {
-		if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
-			traceConceptNameResolverPath = "getPatient.getIdentifier.getValue";
+		String res = "<>";
+		try {
+			if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
+				traceConceptNameResolverPath = "getPatient.getIdentifier.getValue";
+			}
+			var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
+			LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, collect));
+			XMLRepository<LogType> repository = new LogRepository();
+			var outputStream = new ByteArrayOutputStream();
+			repository.save(new ObjectFactory().createLog(log), outputStream);
+			res = outputStream.toString(StandardCharsets.UTF_8);
+		} catch (NullPointerException npe) {
+			traceConceptNameResolverPath = "getPatient.getReference";
+			var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
+			LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, collect));
+			XMLRepository<LogType> repository = new LogRepository();
+			var outputStream = new ByteArrayOutputStream();
+			repository.save(new ObjectFactory().createLog(log), outputStream);
+			res = outputStream.toString(StandardCharsets.UTF_8);
 		}
-
-		var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
-		LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, collect));
-		XMLRepository<LogType> repository = new LogRepository();
-		var outputStream = new ByteArrayOutputStream();
-		repository.save(new ObjectFactory().createLog(log), outputStream);
-		String res = outputStream.toString(StandardCharsets.UTF_8);
 
 		theServletResponse.setStatus(200);
 		theServletResponse.setContentType("text/xml");
