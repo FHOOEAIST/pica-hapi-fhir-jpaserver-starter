@@ -182,10 +182,73 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 	}
 
 	@Operation(name = "$ocel", manualResponse = true, idempotent = true)
-	public void toOcel(HttpServletResponse theServletResponse) throws IOException {
+	public void toOcel(@OperationParam(name = "planDefinition") String planDefinition,
+							 @OperationParam(name = "grouping", max = 1) String grouping,
+							 @OperationParam(name = "start", min = 0, max = 1) String startDateStr,
+							 @OperationParam(name = "end", min = 0, max = 1) String endDateStr,
+							 @OperationParam(name = "patientId", min = 0, max = 1) String patientStr,
+							 HttpServletResponse theServletResponse) throws IOException {
+
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
-		List<AuditEvent> collect = search.getAllResources().stream().map(AuditEvent.class::cast).collect(Collectors.toList());
+		List<AuditEvent> collect = search.getAllResources().stream()
+			.map(AuditEvent.class::cast)
+			.filter(auditEvent -> auditEvent.hasPatient() && auditEvent.getPatient() != null)
+			.filter(auditEvent -> auditEvent.hasCode() && auditEvent.getCode() != null)
+			.filter(AuditEvent::hasOccurred)
+			.collect(Collectors.toList());
+
+		// Filter by patient ID if provided
+		if (patientStr != null && !patientStr.trim().isEmpty()) {
+			String normalizedPatientId = patientStr.startsWith("Patient/") ? patientStr : "Patient/" + patientStr;
+
+			collect = collect.stream()
+				.filter(auditEvent -> normalizedPatientId.equals(auditEvent.getPatient().getIdentifier().getValue()))
+				.collect(Collectors.toList());
+		}
+
+		// Filter by start and end date if a start date is provided
+		if (startDateStr != null && !startDateStr.trim().isEmpty()) {
+			// Set end date to current date if missing
+			if (endDateStr == null || endDateStr.trim().isEmpty()) {
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				endDateStr = sdf.format(new Date());
+			}
+
+			// Convert date strings to FHIR DateTimeType objects
+			DateTimeType startDateTime;
+			try {
+				startDateTime = new DateTimeType(startDateStr);
+			} catch (Exception e) {
+				throw new InvalidRequestException("Invalid start date. Use format YYYY-MM-DD.");
+			}
+
+			DateTimeType endDateTime;
+			try {
+				endDateTime = new DateTimeType(endDateStr);
+			} catch (Exception e) {
+				throw new InvalidRequestException("Invalid end date. Use format YYYY-MM-DD.");
+			}
+
+			// Filter events by occurred date
+			collect = collect.stream()
+				.filter(auditEvent -> {
+					Date occurredDate = null;
+					if (auditEvent.hasOccurredPeriod() && auditEvent.getOccurredPeriod().hasStart()) {
+						occurredDate = auditEvent.getOccurredPeriod().getStart();
+					} else if (auditEvent.hasOccurredDateTimeType()) {
+						occurredDate = auditEvent.getOccurredDateTimeType().getValue();
+					}
+					if (occurredDate == null) {
+						return false;
+					}
+					boolean isAfterStart = !occurredDate.before(startDateTime.getValue());
+					boolean isBeforeEnd = !occurredDate.after(endDateTime.getValue());
+					return isAfterStart && isBeforeEnd;
+				})
+				.collect(Collectors.toList());
+		}
 		super.toOcel(collect, theServletResponse);
+
 	}
 
 	@Operation(name = "$dfg", manualResponse = true, idempotent = true)
