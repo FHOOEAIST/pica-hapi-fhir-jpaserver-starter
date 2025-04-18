@@ -53,7 +53,6 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 				.filter(Objects::nonNull)
 				.filter(AuditEvent.class::isInstance)
 				.map(AuditEvent.class::cast)
-				// Basic filtering (e.g., patient and code must be present)
 				.filter(auditEvent -> auditEvent.hasPatient() && auditEvent.getPatient() != null)
 				.filter(auditEvent -> auditEvent.hasCode() && auditEvent.getCode() != null)
 				.filter(AuditEvent::hasOccurred)
@@ -64,19 +63,20 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			String normalizedPatientId = patientStr.startsWith("Patient/") ? patientStr : "Patient/" + patientStr;
 
 			events = events.stream()
-					.filter(auditEvent -> normalizedPatientId.equals(auditEvent.getPatient().getIdentifier().getValue()))
+					.filter(auditEvent ->
+						normalizedPatientId.equals(auditEvent.getPatient().getIdentifier().getValue()) ||
+						normalizedPatientId.equals(auditEvent.getPatient().getReference()))
 					.collect(Collectors.toList());
+
 		}
 
 		// Filter by start and end date if a start date is provided
 		if (startDateStr != null && !startDateStr.trim().isEmpty()) {
-			// Set end date to current date if missing
 			if (endDateStr == null || endDateStr.trim().isEmpty()) {
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				endDateStr = sdf.format(new Date());
 			}
 
-			// Convert date strings to FHIR DateTimeType objects
 			DateTimeType startDateTime;
 			try {
 				startDateTime = new DateTimeType(startDateStr);
@@ -110,7 +110,6 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 					.collect(Collectors.toList());
 		}
 
-		// Convert filtered AuditEvents to XES format
 		super.toXes(planDefinition, events, grouping, theServletResponse);
 	}
 
@@ -120,18 +119,15 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			@OperationParam(name = "start", min = 1, max = 1) String startDateStr,
 			@OperationParam(name = "end", min = 0, max = 1) String endDateStr) {
 
-		// Check if the start date is provided
 		if (startDateStr == null || startDateStr.trim().isEmpty()) {
 			throw new InvalidRequestException("Start date must be provided.");
 		}
 
-		// Set end date to now if not provided
 		if (endDateStr == null || endDateStr.trim().isEmpty()) {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			endDateStr = sdf.format(new Date());
 		}
-		System.out.println(endDateStr);
-		// Convert the start date (YYYY-MM-DD) to a FHIR DateTimeType
+
 		DateTimeType startDateTime;
 		try {
 			startDateTime = new DateTimeType(startDateStr.split("/")[0] );
@@ -139,7 +135,6 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			throw new InvalidRequestException("Invalid start date format. Use YYYY-MM-DD.");
 		}
 
-		// Convert the end date to a FHIR DateTimeType
 		DateTimeType endDateTime;
 		try {
 			endDateTime = new DateTimeType(endDateStr);
@@ -147,7 +142,7 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			throw new InvalidRequestException("Invalid end date format. Use YYYY-MM-DD.");
 		}
 
-		// Retrieve AuditEvents (assuming myAuditEventDao is initialized)
+		// Retrieve AuditEvents
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
 		
 		List<AuditEvent> filteredEvents = search.getAllResources().stream()
@@ -165,15 +160,12 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 					if (occurredDate == null) {
 						return false;
 					}
-					// Check if event occurred on or after the start date
 					boolean isAfterStart = !occurredDate.before(startDateTime.getValue());
-					// Check if event occurred on or before the end date
 					boolean isBeforeEnd = !occurredDate.after(endDateTime.getValue());
 					return isAfterStart && isBeforeEnd;
 				})
 				.collect(Collectors.toList());
 
-		// Create a Bundle and add the filtered AuditEvents
 		Bundle bundle = new Bundle();
 		for (AuditEvent event : filteredEvents) {
 			bundle.addEntry().setResource(event);
@@ -202,19 +194,20 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			String normalizedPatientId = patientStr.startsWith("Patient/") ? patientStr : "Patient/" + patientStr;
 
 			collect = collect.stream()
-				.filter(auditEvent -> normalizedPatientId.equals(auditEvent.getPatient().getIdentifier().getValue()))
+				.filter(auditEvent ->
+					normalizedPatientId.equals(auditEvent.getPatient().getIdentifier().getValue()) ||
+				 	normalizedPatientId.equals(auditEvent.getPatient().getReference()))
 				.collect(Collectors.toList());
 		}
 
 		// Filter by start and end date if a start date is provided
 		if (startDateStr != null && !startDateStr.trim().isEmpty()) {
-			// Set end date to current date if missing
+
 			if (endDateStr == null || endDateStr.trim().isEmpty()) {
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				endDateStr = sdf.format(new Date());
 			}
 
-			// Convert date strings to FHIR DateTimeType objects
 			DateTimeType startDateTime;
 			try {
 				startDateTime = new DateTimeType(startDateStr);
