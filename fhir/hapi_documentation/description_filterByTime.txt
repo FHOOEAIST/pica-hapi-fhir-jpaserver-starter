@@ -1,0 +1,36 @@
+filterByTime-Filter)
+url: AuditEvent/$filterByTime
+version:
+name:Time Filter
+title: Time Filter AuditEvents
+status:
+kind: operation
+date: 2025-05-13
+publisher: FH Upper Austria
+contact:
+description: Filters AuditEvents according to the Date. 
+			 This can be used to define an interval, also possible on one side, which events are relevant
+code:
+comment: implemented for R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+	name: start
+	use: 
+	min: 0
+	max: 1
+	documentation: 	Filters the events based on the AuditEvent.occuredDateTime.start attribute.
+					Events that occured after the start date are being cut out.
+					
+	type: filter
+	
+	name: end
+	use: 
+	min: 0
+	max: 1
+	documentation: 	Filters the events based on the AuditEvent.occuredDateTime.end attribute.
+					Events that occured before the start date are being cut out
+	type: filter

@@ -7,10 +7,7 @@ import ca.uhn.fhir.jpa.term.TermLoaderSvcImpl;
 import ca.uhn.fhir.jpa.term.api.ITermCodeSystemStorageSvc;
 import ca.uhn.fhir.jpa.term.api.ITermDeferredStorageSvc;
 import ca.uhn.fhir.jpa.term.api.ITermLoaderSvc;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @Conditional(OnDSTU2Condition.class)
@@ -18,6 +15,7 @@ import org.springframework.context.annotation.Import;
 	JpaDstu2Config.class,
 	StarterJpaConfig.class
 })
+@ComponentScan(basePackages = { "ca.uhn.fhir.jpa.starter.controller" })
 public class FhirServerConfigDstu2 {
 	@Bean
 	public ITermLoaderSvc termLoaderService(ITermDeferredStorageSvc theDeferredStorageSvc, ITermCodeSystemStorageSvc theCodeSystemStorageSvc) {

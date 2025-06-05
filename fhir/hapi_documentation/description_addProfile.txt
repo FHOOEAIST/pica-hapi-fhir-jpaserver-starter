@@ -1,0 +1,20 @@
+addProfile)
+url: AuditEvent/$addProfile
+version:
+name:Add Profile
+title: Add Profile AuditEvents
+status:
+kind: operation
+date: 2025-05-13
+publisher: FH Upper Austria
+contact:
+description: Extends the AuditEvents with the "aist-pica-auditevent-carepathway"
+code:
+comment: implemented for R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+	-

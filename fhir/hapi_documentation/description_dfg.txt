@@ -1,0 +1,81 @@
+DFG-Filter)
+url: AuditEvent/$dfg
+version:
+name:AuditEventToDFG
+title: Transform AuditEvents to DFG
+status:
+kind: operation
+date: 2025-05-13
+publisher: FH Upper Austria
+contact:
+description: Transforms AuditEvents into an DFG Log and also allows to filter the AuditEvents before
+code:
+comment: implemented for R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+	name: start
+	use: 
+	min: 0
+	max: 1
+	documentation: 	Filters the events based on the AuditEvent.occuredDateTime.start attribute.
+					Events that occured after the start date are being cut out.
+					
+	type: filter
+	
+	name: end
+	use: 
+	min: 0
+	max: 1
+	documentation: 	Filters the events based on the AuditEvent.occuredDateTime.end attribute.
+					Events that occured before the start date are being cut out
+	type: filter
+	
+	
+	name: core
+	use: 
+	min: 0
+	max: *
+	documentation: 	Filters the events based on the AuditEvent.patient.reference or the AuditEvent.patient.identifier.value.
+					Thus, in addition to the id, the patient reference can also be used instead.
+					After applying the filter all events that don't match one of the listed patients are beeing cut out.
+	type: filter
+	
+	
+	name: actor
+	use: 
+	min: 0
+	max: *
+	documentation: 	Filters the events based on the AuditEvent.encounter.reference.
+					After applying the filter all events that don't match one of the referenced Actors are beeing cut out.
+	type: filter
+	
+	
+	name: patientvisit
+	use: 
+	min: 0
+	max: *
+	documentation: 	Filters the events based on the AuditEvent.practitioner.reference.
+					After applying the filter all events that don't match one of the referenced patientvisits are beeing cut out.
+	type: filter
+	
+	
+	name: conformance
+	use: 
+	min: 0
+	max: *
+	documentation: 	Filters the events based on the AuditEvent.code.text or the AuditEvent.code.coding attributes.
+					After applying the filter all events that don't match one of the referenced conformance codes are beeing cut out.
+	type: filter
+	
+	
+	name: grouping
+	use: 
+	min: 0
+	max: 1
+	documentation: 	Filters the events based on the getCode.getCodingFirstRep.getDisplay.
+					Only if the tag matches the display name form the first appearing code the event doesn't get filtered out.
+	type: filter

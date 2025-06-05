@@ -3,11 +3,13 @@ package ca.uhn.fhir.jpa.starter.common;
 import ca.uhn.fhir.jpa.search.lastn.ElasticsearchSvcImpl;
 import ca.uhn.fhir.jpa.starter.util.EnvironmentHelper;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 /** Shared configuration for Elasticsearch */
 @Configuration
+@ComponentScan(basePackages = { "ca.uhn.fhir.jpa.starter.controller" })
 public class ElasticsearchConfig {
 	private static final org.slf4j.Logger ourLog = org.slf4j.LoggerFactory.getLogger(ElasticsearchConfig.class);
 	@Bean

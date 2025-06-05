@@ -19,10 +19,7 @@ import com.google.common.base.Strings;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.dstu2.model.Subscription;
 import org.springframework.boot.env.YamlPropertySourceLoader;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -35,6 +32,7 @@ import java.util.stream.Collectors;
  */
 @Configuration
 @EnableTransactionManagement
+@ComponentScan(basePackages = { "ca.uhn.fhir.jpa.starter.controller" })
 public class FhirServerConfigCommon {
 
   private static final org.slf4j.Logger ourLog = org.slf4j.LoggerFactory.getLogger(FhirServerConfigCommon.class);

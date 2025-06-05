@@ -11,10 +11,7 @@ import ca.uhn.fhir.jpa.starter.transformer.AuditEventR4ToR5Transformer;
 import ca.uhn.fhir.rest.server.IResourceProvider;
 import org.hl7.fhir.r4.model.AuditEvent;
 import org.hl7.fhir.r4.model.Encounter;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 import science.aist.fhirauditeventtoocel.FhirAuditEventsToOCELLogService;
 import science.aist.fhirauditeventtoxes.FhirAuditEventsToXESLogService;
 import science.aist.gtf.transformation.Transformer;
@@ -27,6 +24,7 @@ import science.aist.gtf.transformation.Transformer;
 	StarterCqlR4Config.class,
 	ElasticsearchConfig.class
 })
+@ComponentScan(basePackages = { "ca.uhn.fhir.jpa.starter.controller" })
 public class FhirServerConfigR4 {
 	@Bean
 	public AuditEventCreatorConsentInterceptor auditEventCreatorConsentInterceptor() {

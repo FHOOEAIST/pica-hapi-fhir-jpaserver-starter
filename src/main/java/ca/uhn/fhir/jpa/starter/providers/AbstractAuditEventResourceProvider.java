@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,26 +31,55 @@ import java.util.List;
  */
 public class AbstractAuditEventResourceProvider {
 
-	protected void toXes(String rootElement, List<AuditEvent> collect, String traceConceptNameResolverPath, HttpServletResponse theServletResponse) throws IOException {
-		String res = "<>";
+	protected void toXes(String rootElement, List<AuditEvent> collect, HttpServletResponse theServletResponse) throws IOException {
+		String res;
+
+		List<AuditEvent> identifierEvents = splitPatientClassifier(collect, 1);
+		List<AuditEvent> referenceEvents = splitPatientClassifier(collect, 2);
+
+		int withoutClassifier = collect.size() - identifierEvents.size() - referenceEvents.size();
+		if(withoutClassifier > 0)
+			System.out.println(withoutClassifier + " AuditEvents without patient classifier");
+
+		StringBuilder combinedResult = new StringBuilder();
+		boolean hasIdentifierLogs = false;
+
 		try {
-			if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
-				traceConceptNameResolverPath = "getPatient.getIdentifier.getValue";
+			if (!identifierEvents.isEmpty()) {
+				var xesService = new FhirAuditEventsToXESLogService("getPatient.getIdentifier.getValue", "getCode.getCodingFirstRep.getDisplay");
+				LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, identifierEvents));
+				XMLRepository<LogType> repository = new LogRepository();
+				var outputStream = new ByteArrayOutputStream();
+				repository.save(new ObjectFactory().createLog(log), outputStream);
+
+				String logContent = outputStream.toString(StandardCharsets.UTF_8);
+				if(!referenceEvents.isEmpty())
+					combinedResult.append(removeLogAfter(logContent));
+				else
+					combinedResult.append(logContent);
+				hasIdentifierLogs = true;
 			}
-			var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
-			LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, collect));
-			XMLRepository<LogType> repository = new LogRepository();
-			var outputStream = new ByteArrayOutputStream();
-			repository.save(new ObjectFactory().createLog(log), outputStream);
-			res = outputStream.toString(StandardCharsets.UTF_8);
-		} catch (NullPointerException npe) {
-			traceConceptNameResolverPath = "getPatient.getReference";
-			var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
-			LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, collect));
-			XMLRepository<LogType> repository = new LogRepository();
-			var outputStream = new ByteArrayOutputStream();
-			repository.save(new ObjectFactory().createLog(log), outputStream);
-			res = outputStream.toString(StandardCharsets.UTF_8);
+
+			if (!referenceEvents.isEmpty()) {
+				var xesService = new FhirAuditEventsToXESLogService("getPatient.getReference", "getCode.getCodingFirstRep.getDisplay");
+				LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle(rootElement, referenceEvents));
+				XMLRepository<LogType> repository = new LogRepository();
+				var outputStream = new ByteArrayOutputStream();
+				repository.save(new ObjectFactory().createLog(log), outputStream);
+
+				String logContent = outputStream.toString(StandardCharsets.UTF_8);
+				if (hasIdentifierLogs)
+					combinedResult.append(removeLogBefore(logContent));
+				else
+					combinedResult.append(logContent);
+			}
+
+			res = combinedResult.toString();
+			System.out.println(res);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			res = "<error>An error occurred while processing XES logs</error>";
 		}
 
 		theServletResponse.setStatus(200);
@@ -58,8 +88,38 @@ public class AbstractAuditEventResourceProvider {
 		theServletResponse.getWriter().close();
 	}
 
+	private List<AuditEvent> splitPatientClassifier(List<AuditEvent> collect, int mode) {
+		List<AuditEvent> filteredEvents = new ArrayList<>();
+
+		for (AuditEvent event : collect) {
+			if (event.hasPatient() && event.getPatient().hasIdentifier() && mode == 1)
+				filteredEvents.add(event);
+			else if (event.hasPatient() && event.getPatient().hasReference() && mode == 2)
+				filteredEvents.add(event);
+		}
+		return filteredEvents;
+	}
+
+	private String removeLogBefore(String xmlContent) {
+		StringBuilder newXmlContent = new StringBuilder();
+		String[] split = xmlContent.split("<trace>");
+		if (split.length <= 1)
+			throw new IllegalStateException("Input XML does not contain any <trace> elements!");
+
+		for (int i = 1; i < split.length; i++)
+			newXmlContent.append("<trace>\n").append(split[i]);
+
+		return newXmlContent.toString();
+	}
+
+	private String removeLogAfter(String xmlContent) {
+		return xmlContent.replaceFirst("</log>$", "");
+	}
+
+
 	protected void toOcel(List<AuditEvent> collect, HttpServletResponse theServletResponse) throws IOException {
 		var ocelService = new FhirAuditEventsToOCELLogService();
+
 		var log = ocelService.convertFhirAuditEventsToOCELLog(collect);
 		var repository = new science.aist.ocel.model.impl.LogRepository();
 		var outputStream = new ByteArrayOutputStream();

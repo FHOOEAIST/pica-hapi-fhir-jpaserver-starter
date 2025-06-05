@@ -5,10 +5,7 @@ import ca.uhn.fhir.jpa.starter.annotations.OnR5Condition;
 import ca.uhn.fhir.jpa.starter.providers.AuditEventResourceProviderR5;
 import ca.uhn.fhir.rest.server.IResourceProvider;
 import ca.uhn.fhir.rest.server.interceptor.consent.IConsentService;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @Conditional(OnR5Condition.class)
@@ -17,6 +14,7 @@ import org.springframework.context.annotation.Import;
 	JpaR5Config.class,
 	ElasticsearchConfig.class
 })
+@ComponentScan(basePackages = { "ca.uhn.fhir.jpa.starter.controller" })
 public class FhirServerConfigR5 {
 	@Bean(name = "auditEventResourceProvider")
 	public IResourceProvider auditEventResourceProvider() {

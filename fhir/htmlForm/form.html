@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>BPMN XML Upload</title>
+    <!-- Prism CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+    <style>
+        #preview {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin-top: 1em;
+            max-height: 300px;
+            overflow: auto;
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+<h1>BPMN XML Upload</h1>
+
+<form method="post" action="/bpmn/upload-xml">
+        <textarea name="bpmnXml" id="bpmnXml" rows="15" cols="100"
+                  placeholder="Copy and paste your BPMN XML here..."
+                  oninput="updatePreview()"></textarea><br>
+    <button type="submit">Upload</button>
+</form>
+
+<h2>Preview</h2>
+<pre id="preview"><code class="language-xml" id="previewCode"></code></pre>
+
+<!-- Prism JS -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-xml.min.js"></script>
+<script>
+    function updatePreview() {
+        const input = document.getElementById('bpmnXml').value;
+        const escaped = input
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+        document.getElementById('previewCode').innerHTML = escaped;
+        Prism.highlightAll();
+    }
+</script>
+</body>
+</html>
