@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/cytoscape@3.19.0/dist/cytoscape.min.js"></script>
+</head>
+<body>
+<form id="fileForm">
+    <label for="filename">Filename:</label>
+    <input type="text" id="filename" placeholder="z.B. petrinet" required>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="cy" style="width: 800px; height: 600px; border: 1px solid #000; margin-top: 20px;"></div>
+<pre id="debug" style="margin-top: 20px; color: red;"></pre>
+
+<script>
+    const form = document.getElementById('fileForm');
+    const debug = document.getElementById('debug');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const filename = document.getElementById('filename').value.trim();
+        if (!filename) {
+            debug.textContent = 'Filename is required.';
+            return;
+        }
+
+        fetch(`/bpmn/files/pnml/${filename}/petrinet`)
+            .then(res => {
+                if (!res.ok) throw new Error('Fetch failed: ' + res.status);
+                return res.json();
+            })
+            .then(data => {
+                const elements = [];
+
+                // Places
+                (data.places || []).forEach(p => {
+                    const id = typeof p === 'string' ? p : p.id;
+                    const name = (typeof p === 'object' && p.name && p.name !== "") ? p.name : id;
+                    elements.push({ data: { id, label: name, type: 'place' } });
+                });
+
+                // Transitions
+                (data.transitions || []).forEach(t => {
+                    const id = typeof t === 'string' ? t : t.id;
+                    const name = (typeof t === 'object' && t.name && t.name !== "") ? t.name : id;
+                    elements.push({ data: { id, label: name, type: 'transition' } });
+                });
+
+                // Arcs
+                (data.arcs || []).forEach(a => {
+                    if (a.source && a.target) {
+                        elements.push({
+                            data: {
+                                id: `${a.source}-${a.target}`,
+                                source: a.source,
+                                target: a.target
+                            }
+                        });
+                    }
+                });
+
+                if (elements.length === 0) {
+                    debug.textContent = 'No elements to display.';
+                    return;
+                }
+
+                debug.textContent = ''; // clear old errors
+
+                cytoscape({
+                    container: document.getElementById('cy'),
+                    elements: elements,
+                    style: [
+                        {
+                            selector: 'node[type="place"]',
+                            style: {
+                                shape: 'ellipse',
+                                label: 'data(label)',
+                                'background-color': '#88f',
+                                width: 20,
+                                height: 20,
+                                'font-size': 10
+                            }
+                        },
+                        {
+                            selector: 'node[type="transition"]',
+                            style: {
+                                shape: 'rectangle',
+                                label: 'data(label)',
+                                'background-color': '#f88',
+                                width: 30,
+                                height: 10,
+                                'font-size': 10
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'width': 2,
+                                'line-color': '#999',
+                                'target-arrow-color': '#999',
+                                'target-arrow-shape': 'triangle'
+                            }
+                        }
+                    ],
+                    layout: {
+                        name: 'cose',
+                        animate: true
+
+                    }
+                });
+            })
+            .catch(err => {
+                debug.textContent = 'Error:\n' + err.message;
+            });
+    });
+</script>
+</body>
+</html>

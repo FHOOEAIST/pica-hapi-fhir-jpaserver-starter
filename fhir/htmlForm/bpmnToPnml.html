@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>BPMN XML Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 2rem;
+          background-color: #f9f9f9;
+        }
+
+        h1, h2 {
+          color: #333;
+        }
+
+        label {
+          font-weight: bold;
+        }
+
+        input[type="text"] {
+          width: 400px;
+          padding: 0.5em;
+          margin-bottom: 1em;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        textarea {
+          width: 100%;
+          max-width: 1000px;
+          height: 300px;
+          padding: 1em;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-family: monospace;
+          resize: vertical;
+          background-color: #fff;
+        }
+
+        button {
+          padding: 0.6em 1.2em;
+          margin-top: 1em;
+          margin-right: 1em;
+          border: none;
+          border-radius: 4px;
+          background-color: #007acc;
+          color: white;
+          cursor: pointer;
+        }
+
+        button:disabled {
+          background-color: #aaa;
+          cursor: not-allowed;
+        }
+
+        pre {
+          background: #f8f8f8;
+          border: 1px solid #ccc;
+          padding: 1em;
+          max-width: 1000px;
+          overflow: auto;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+
+        #pnmlResult {
+          margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Upload BPMN XML</h1>
+
+<label for="filename">Filename (without extension):</label><br />
+<input type="text" id="filename" name="filename" /><br />
+
+<label for="bpmnXml">BPMN XML:</label><br />
+<textarea id="bpmnXml" placeholder="Paste your BPMN XML here..."></textarea><br />
+
+<button onclick="uploadXml()">Upload and Convert</button>
+<button id="downloadBtn" onclick="downloadPnml()" disabled>Download PNML</button>
+
+<h2>PNML Result</h2>
+<pre id="pnmlResult"><code class="language-xml" id="pnmlCode">Waiting for conversion...</code></pre>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-xml.min.js"></script>
+<script>
+    function uploadXml() {
+      const xml = document.getElementById("bpmnXml").value;
+      const filename = document.getElementById("filename").value.trim();
+      const codeElem = document.getElementById("pnmlCode");
+      const downloadBtn = document.getElementById("downloadBtn");
+
+      if (!filename || !xml) {
+        alert("Please enter filename and BPMN XML.");
+        return;
+      }
+
+      codeElem.textContent = "Loading...";
+      Prism.highlightElement(codeElem);
+      downloadBtn.disabled = true;
+
+      fetch("/bpmn/convert-bpmn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ filename, xml })
+      })
+      .then(res => res.text())
+      .then(data => {
+        codeElem.textContent = data;
+        Prism.highlightElement(codeElem);
+        downloadBtn.disabled = false;
+        downloadBtn.setAttribute("data-filename", filename + ".pnml");
+      })
+      .catch(err => {
+        codeElem.textContent = "Error: " + err.message;
+        downloadBtn.disabled = true;
+      });
+    }
+
+    function downloadPnml() {
+      const codeElem = document.getElementById("pnmlCode");
+      const downloadBtn = document.getElementById("downloadBtn");
+      const text = codeElem.textContent;
+      const filename = downloadBtn.getAttribute("data-filename") || "result.pnml";
+
+      const blob = new Blob([text], { type: "application/xml" });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+
+      URL.revokeObjectURL(url);
+    }
+</script>
+
+</body>
+</html>

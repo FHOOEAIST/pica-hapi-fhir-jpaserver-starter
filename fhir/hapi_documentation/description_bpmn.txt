@@ -1,0 +1,65 @@
+Controller Overview: FileUploadController.java
+Location: /bpmn/
+Version: 1.0.0
+Author: FH Upper Austria
+Date: 2025-07-10
+
+---
+
+Endpoints:
+POST /convert-bpmn
+  - Accepts JSON payload with fields:
+      * xml: BPMN XML content as a string (must be valid BPMN 2.0).
+      * filename: Base filename without extension.
+  - Saves BPMN XML file to disk.
+  - Calls external Python script to convert BPMN to PNML.
+  - Returns generated PNML XML content as text/plain.
+  - Errors if input missing, conversion fails, or PNML not found.
+
+GET /forms/upload
+  - Returns static HTML upload form for BPMN files.
+
+GET /files/bpmn
+  - Lists all uploaded BPMN (.bpmn) files as HTML links.
+  - Triggers batch conversion of BPMN files to PNML.
+
+GET /files/bpmn/{filename}
+  - Returns raw BPMN XML content for specified filename.
+  - Triggers conversion side-effect for the file.
+
+GET /files/pnml
+  - Lists all generated PNML (.pnml) files as HTML links.
+
+GET /files/pnml/{filename}
+  - Returns raw PNML XML content for specified filename.
+
+GET /files/pnml/{filename}/petrinet
+  - Parses PNML file.
+  - Extracts places, transitions, and arcs.
+  - Returns Petri net data as JSON.
+
+GET /view
+  - Serves HTML viewer for BPMN to PNML conversion (xml code to pnml).
+
+GET /view2
+  - Serves alternate HTML viewer for BPMN to PNML conversion (file to pnml).
+
+GET /view/petrinet
+  - Serves HTML page for Petri net visualization.
+
+---
+
+Directories used:
+- BPMN files saved under: fhir/upload/bpmn/
+- PNML files saved under: fhir/upload/pnml/
+
+External dependency:
+- Python script "bpmn_to_petri.py" for conversion, located at fhir/bpmn_to_petrinet/
+
+---
+
+Notes:
+- POST /convert-bpmn expects a JSON body with "xml" and "filename" keys.
+- The conversion process saves BPMN, runs Python script, then returns PNML content.
+- GET endpoints for files return raw file contents or HTML listings.
+- /files/pnml/{filename}/petrinet endpoint returns Petri net structure as JSON.
