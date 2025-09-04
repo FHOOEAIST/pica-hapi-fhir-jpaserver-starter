@@ -1,0 +1,2 @@
+id,code_code,code_system,code_display,code_text,agent_who_reference,agent_who_display,agent_type,agent_role,recorded,occurred,patient_reference,patient_display,patient_type,source_observer,encounter,text_div,text_status
+1,LOGIN,systemA,Login,User login,Practitioner/123,Dr. Smith,User,Admin,2025-08-20T10:00:00Z,2025-08-20T09:59:00Z,Patient/456,John Doe,Patient,Server1,Encounter/1,<div xmlns="http://www.w3.org/1999/xhtml">Application Start for under service login &quot;Grahame&quot; (id: Grahame's TestHL7Connect)</div> ,extensions
