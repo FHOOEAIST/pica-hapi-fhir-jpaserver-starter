@@ -1,14 +1,77 @@
-addProfile)
-url: AuditEvent/$addProfile
+addCoreProfile)
+url: AuditEvent/$addCoreProfile
 version:
-name:Add Profile
-title: Add Profile AuditEvents
+name: Add Core Profile
+title: Add Core Profile AuditEvents
 status:
 kind: operation
-date: 2025-05-13
+date: 2025-09-12
+publisher: FH Upper Austria
+contact:
+description: Extends the AuditEvents with the "aist-pica-auditevent-core"
+code:
+comment: implemented for R4/R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+  -
+
+addCarePathwayProfile)
+url: AuditEvent/$addCarePathwayProfile
+version:
+name: Add CarePathway Profile
+title: Add CarePathway Profile AuditEvents
+status:
+kind: operation
+date: 2025-09-12
 publisher: FH Upper Austria
 contact:
 description: Extends the AuditEvents with the "aist-pica-auditevent-carepathway"
+code:
+comment: implemented for R4/R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+  -
+
+addActorProfile)
+url: AuditEvent/$addActorProfile
+version:
+name: Add Actor Profile
+title: Add Actor Profile AuditEvents
+status:
+kind: operation
+date: 2025-09-12
+publisher: FH Upper Austria
+contact:
+description: Extends the AuditEvents with the "aist-pica-auditevent-actor"
+code:
+comment: implemented for R4/R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+  -
+
+addConformanceProfile)
+url: AuditEvent/$addConformanceProfile
+version:
+name: Add Conformance Profile
+title: Add Conformance Profile AuditEvents
+status:
+kind: operation
+date: 2025-09-12
+publisher: FH Upper Austria
+contact:
+description: Extends the AuditEvents with the "aist-pica-auditevent-conformance"
 code:
 comment: implemented for R5 AuditEvents
 base:
@@ -17,4 +80,25 @@ system:
 type:
 instance:
 parameter:
-	-
+  -
+
+addPatientVisitProfile)
+url: AuditEvent/$addPatientVisitProfile
+version:
+name: Add PatientVisit Profile
+title: Add PatientVisit Profile AuditEvents
+status:
+kind: operation
+date: 2025-09-12
+publisher: FH Upper Austria
+contact:
+description: Extends the AuditEvents with the "aist-pica-auditevent-patientvisit"
+code:
+comment: implemented for R5 AuditEvents
+base:
+resource:
+system:
+type:
+instance:
+parameter:
+  -

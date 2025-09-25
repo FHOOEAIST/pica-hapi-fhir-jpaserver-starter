@@ -94,7 +94,8 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			.filter(AuditEvent::hasOccurred)
 			.collect(Collectors.toList());
 
-		filteredEvents.forEach(this::enrichAuditEventWithProfile);
+		//TODO why do i need that here?
+		//filteredEvents.forEach(this::enrichAuditEventWithProfile);
 		filteredEvents = filterByTime(filteredEvents,startDateStr,endDateStr);
 
 		Bundle bundle = new Bundle();
@@ -104,8 +105,9 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 		return bundle;
 	}
 
-	@Operation(name = "$addProfile", idempotent = true, type = AuditEvent.class)
-	public Bundle addProfileToAudioEvent() {
+
+	@Operation(name = "addCarePathwayProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addCarePathProfileToAudioEvent() {
 
 		// Retrieve AuditEvents
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
@@ -118,7 +120,95 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 			.filter(AuditEvent::hasOccurred)
 			.collect(Collectors.toList());
 
-		filteredEvents.forEach(this::enrichAuditEventWithProfile);
+		filteredEvents.forEach(this::addCarePathwayProfile);
+
+		Bundle bundle = new Bundle();
+		for (AuditEvent event : filteredEvents) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+	@Operation(name = "addCoreProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addCoreProfileToAudioEvent() {
+
+		// Retrieve AuditEvents
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+		List<AuditEvent> filteredEvents = search.getAllResources().stream()
+			.filter(Objects::nonNull)
+			.filter(AuditEvent.class::isInstance)
+			.map(AuditEvent.class::cast)
+			.filter(auditEvent -> auditEvent.hasPatient() && auditEvent.getPatient() != null)
+			.filter(auditEvent -> auditEvent.hasCode() && auditEvent.getCode() != null)
+			.filter(AuditEvent::hasOccurred)
+			.collect(Collectors.toList());
+
+		filteredEvents.forEach(this::addCoreProfile);
+
+		Bundle bundle = new Bundle();
+		for (AuditEvent event : filteredEvents) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+	@Operation(name = "addActorProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addActorProfileToAudioEvent() {
+
+		// Retrieve AuditEvents
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+		List<AuditEvent> filteredEvents = search.getAllResources().stream()
+			.filter(Objects::nonNull)
+			.filter(AuditEvent.class::isInstance)
+			.map(AuditEvent.class::cast)
+			.filter(auditEvent -> auditEvent.hasPatient() && auditEvent.getPatient() != null)
+			.filter(auditEvent -> auditEvent.hasCode() && auditEvent.getCode() != null)
+			.filter(AuditEvent::hasOccurred)
+			.collect(Collectors.toList());
+
+		filteredEvents.forEach(this::addActorProfile);
+
+		Bundle bundle = new Bundle();
+		for (AuditEvent event : filteredEvents) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+	@Operation(name = "addConformanceProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addConformanceProfileToAudioEvent() {
+
+		// Retrieve AuditEvents
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+		List<AuditEvent> filteredEvents = search.getAllResources().stream()
+			.filter(Objects::nonNull)
+			.filter(AuditEvent.class::isInstance)
+			.map(AuditEvent.class::cast)
+			.filter(auditEvent -> auditEvent.hasPatient() && auditEvent.getPatient() != null)
+			.filter(auditEvent -> auditEvent.hasCode() && auditEvent.getCode() != null)
+			.filter(AuditEvent::hasOccurred)
+			.collect(Collectors.toList());
+
+		filteredEvents.forEach(this::addConformanceProfile);
+
+		Bundle bundle = new Bundle();
+		for (AuditEvent event : filteredEvents) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+	@Operation(name = "addPatientVisitProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addPatientVisitProfileToAudioEvent() {
+
+		// Retrieve AuditEvents
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+		List<AuditEvent> filteredEvents = search.getAllResources().stream()
+			.filter(Objects::nonNull)
+			.filter(AuditEvent.class::isInstance)
+			.map(AuditEvent.class::cast)
+			.filter(auditEvent -> auditEvent.hasPatient() && auditEvent.getPatient() != null)
+			.filter(auditEvent -> auditEvent.hasCode() && auditEvent.getCode() != null)
+			.filter(AuditEvent::hasOccurred)
+			.collect(Collectors.toList());
+
+		filteredEvents.forEach(this::addPatientVisitProfile);
 
 		Bundle bundle = new Bundle();
 		for (AuditEvent event : filteredEvents) {
@@ -274,7 +364,6 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 		return returnVal;
 	}
 
-
 	public static List<AuditEvent> filterByPatientVisit(List<AuditEvent> events, List<String> patientVisitReferenceLst) {
 		if (patientVisitReferenceLst == null || patientVisitReferenceLst.get(0).trim().isEmpty()) {
 			return events;
@@ -318,13 +407,46 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 
 	}
 
-	protected void enrichAuditEventWithProfile(AuditEvent auditEvent) {
+	protected void addCarePathwayProfile(AuditEvent auditEvent) {
 		if (!auditEvent.hasMeta()) {
 			auditEvent.setMeta(new Meta());
 		}
 		auditEvent.getMeta().setSource("AISTPICAAuditEventCarePathway");
 		auditEvent.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-carepathway");
+
 	}
+	protected void addCoreProfile(AuditEvent auditEvent) {
+		if (!auditEvent.hasMeta()) {
+			auditEvent.setMeta(new Meta());
+		}
 
+		auditEvent.getMeta().setSource("AISTPICAAuditEventCore");
+		auditEvent.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-core");
+	}
+	protected void addActorProfile(AuditEvent auditEvent) {
+		if (!auditEvent.hasMeta()) {
+			auditEvent.setMeta(new Meta());
+		}
 
+		auditEvent.getMeta().setSource("AISTPICAAuditEventActor");
+		auditEvent.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-actor");
+
+	}
+	protected void addConformanceProfile(AuditEvent auditEvent) {
+		if (!auditEvent.hasMeta()) {
+			auditEvent.setMeta(new Meta());
+		}
+
+		auditEvent.getMeta().setSource("AISTPICAAuditEventConformance");
+		auditEvent.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-conformance");
+
+	}
+	protected void addPatientVisitProfile(AuditEvent auditEvent) {
+		if (!auditEvent.hasMeta()) {
+			auditEvent.setMeta(new Meta());
+		}
+
+		auditEvent.getMeta().setSource("AISTPICAAuditEventPatientVisit");
+		auditEvent.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-patientvisit");
+	}
 }

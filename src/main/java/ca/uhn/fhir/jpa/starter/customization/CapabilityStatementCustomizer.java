@@ -28,8 +28,21 @@ public class CapabilityStatementCustomizer {
 
 				rest.getResource().stream()
 					.filter(resource -> "AuditEvent".equals(resource.getType()))
-					.forEach(resource -> resource.addSupportedProfile(
-						"http://example.org/fhir/StructureDefinition/AuditEvent"));
+					.forEach(resource -> {
+						//R5
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-core");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-carepathway");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-actor");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-conformance");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R5/StructureDefinition/aist-pica-auditevent-patientvisit");
+
+						//R4
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-core");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-carepathway");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-actor");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-conformance");
+						resource.addSupportedProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-patientvisit");
+					});
 
 				rest.getResource().stream()
 					.filter(resource -> "Patient".equals(resource.getType()))

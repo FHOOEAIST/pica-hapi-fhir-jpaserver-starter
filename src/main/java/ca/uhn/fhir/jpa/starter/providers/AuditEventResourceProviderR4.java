@@ -84,18 +84,89 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 		super.toXes(reasonCode, events, theServletResponse);
 	}
 
-	@Operation(name = "$addProfile", idempotent = true, type = org.hl7.fhir.r4.model.AuditEvent.class)
-	public Bundle addProfileToAudioEvent() {
 
+	@Operation(name = "$addCarePathwayProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addCarePathwayProfileToAuditEvent() {
 		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
 
-		Stream<AuditEvent> auditEventStream = search.getAllResources()
+		List<org.hl7.fhir.r4.model.AuditEvent> collect = search.getAllResources()
 			.stream()
-			.map(AuditEvent.class::cast);
+			.map(org.hl7.fhir.r4.model.AuditEvent.class::cast)
+			.collect(Collectors.toList());
 
-		List<org.hl7.fhir.r4.model.AuditEvent> collect = auditEventStream.collect(Collectors.toList());
+		collect.forEach(this::addCarePathwayProfile);
 
-		collect.forEach(this::enrichAuditEventWithProfile);
+		Bundle bundle = new Bundle();
+		for (org.hl7.fhir.r4.model.AuditEvent event : collect) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+
+	@Operation(name = "$addCoreProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addCoreProfileToAuditEvent() {
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+
+		List<org.hl7.fhir.r4.model.AuditEvent> collect = search.getAllResources()
+			.stream()
+			.map(org.hl7.fhir.r4.model.AuditEvent.class::cast)
+			.collect(Collectors.toList());
+
+		collect.forEach(this::addCoreProfile);
+
+		Bundle bundle = new Bundle();
+		for (org.hl7.fhir.r4.model.AuditEvent event : collect) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+
+	@Operation(name = "$addActorProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addActorProfileToAuditEvent() {
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+
+		List<org.hl7.fhir.r4.model.AuditEvent> collect = search.getAllResources()
+			.stream()
+			.map(org.hl7.fhir.r4.model.AuditEvent.class::cast)
+			.collect(Collectors.toList());
+
+		collect.forEach(this::addActorProfile);
+
+		Bundle bundle = new Bundle();
+		for (org.hl7.fhir.r4.model.AuditEvent event : collect) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+
+	@Operation(name = "$addConformanceProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addConformanceProfileToAuditEvent() {
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+
+		List<org.hl7.fhir.r4.model.AuditEvent> collect = search.getAllResources()
+			.stream()
+			.map(org.hl7.fhir.r4.model.AuditEvent.class::cast)
+			.collect(Collectors.toList());
+
+		collect.forEach(this::addConformanceProfile);
+
+		Bundle bundle = new Bundle();
+		for (org.hl7.fhir.r4.model.AuditEvent event : collect) {
+			bundle.addEntry().setResource(event);
+		}
+		return bundle;
+	}
+
+	@Operation(name = "$addPatientVisitProfile", idempotent = true, type = AuditEvent.class)
+	public Bundle addPatientVisitProfileToAuditEvent() {
+		IBundleProvider search = myAuditEventDao.search(SearchParameterMap.newSynchronous());
+
+		List<org.hl7.fhir.r4.model.AuditEvent> collect = search.getAllResources()
+			.stream()
+			.map(org.hl7.fhir.r4.model.AuditEvent.class::cast)
+			.collect(Collectors.toList());
+
+		collect.forEach(this::addPatientVisitProfile);
 
 		Bundle bundle = new Bundle();
 		for (org.hl7.fhir.r4.model.AuditEvent event : collect) {
@@ -108,7 +179,7 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 	public void toOcel(
 		@OperationParam(name = "start", min = 0, max = 1) String startDateStr,
 		@OperationParam(name = "end", min = 0, max = 1) String endDateStr,
-		@OperationParam(name = "core", min = 0, max = 1) List<String> patientStr, //PatientId mehr als eine
+		@OperationParam(name = "core", min = 0, max = 1) List<String> patientStr, //PatientId more than one
 		@OperationParam(name = "actor", min = 0) List<String> actorRef,
 		@OperationParam(name = "patientvisit", min = 0) List<String> patientvisit,
 		@OperationParam(name = "conformance", min = 0) List<String> conformance,
@@ -129,7 +200,7 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 		@OperationParam(name = "carePlan", min=0) String carePlan,
 		@OperationParam(name = "start", min = 0, max = 1) String startDateStr,
 		@OperationParam(name = "end", min = 0, max = 1) String endDateStr,
-		@OperationParam(name = "core", min = 0) List<String> patientStr, //PatientId mehr als eine
+		@OperationParam(name = "core", min = 0) List<String> patientStr, //PatientId more than one
 		@OperationParam(name = "actorRef", min = 0, max = 1) List<String>  actorRef,
 		@OperationParam(name = "patientvisit", min = 0) List<String> patientvisit,
 		@OperationParam(name = "conformance", min = 0) List<String> conformance,
@@ -198,7 +269,9 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 			.filter(org.hl7.fhir.r4.model.AuditEvent::hasRecorded)
 			.collect(Collectors.toList());
 
-		filteredEvents.forEach(this::enrichAuditEventWithProfile);
+		//TODO why do i need that
+
+		// filteredEvents.forEach(this::enrichAuditEventWithProfile);
 		filteredEvents = filterByTimeR4(filteredEvents,startDateStr,endDateStr);
 
 		org.hl7.fhir.r4.model.Bundle bundle = new org.hl7.fhir.r4.model.Bundle();
@@ -252,13 +325,35 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 		return events;
 	}
 
-
-	protected void enrichAuditEventWithProfile(org.hl7.fhir.r4.model.AuditEvent auditEvent) {
-		if (!auditEvent.hasMeta()) {
-			auditEvent.setMeta(new Meta());
-		}
-		auditEvent.getMeta().setSource("AISTPICAAuditEventCarePathway");
-		auditEvent.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-carepathway");
+	protected void addCarePathwayProfile(org.hl7.fhir.r4.model.AuditEvent ae) {
+		if (!ae.hasMeta()) ae.setMeta(new org.hl7.fhir.r4.model.Meta());
+		ae.getMeta().setSource("AISTPICAAuditEventCarePathway");
+		ae.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-carepathway");
 	}
+
+	protected void addCoreProfile(org.hl7.fhir.r4.model.AuditEvent ae) {
+		if (!ae.hasMeta()) ae.setMeta(new org.hl7.fhir.r4.model.Meta());
+		ae.getMeta().setSource("AISTPICAAuditEventCore");
+		ae.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-core");
+	}
+
+	protected void addActorProfile(org.hl7.fhir.r4.model.AuditEvent ae) {
+		if (!ae.hasMeta()) ae.setMeta(new org.hl7.fhir.r4.model.Meta());
+		ae.getMeta().setSource("AISTPICAAuditEventActor");
+		ae.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-actor");
+	}
+
+	protected void addConformanceProfile(org.hl7.fhir.r4.model.AuditEvent ae) {
+		if (!ae.hasMeta()) ae.setMeta(new org.hl7.fhir.r4.model.Meta());
+		ae.getMeta().setSource("AISTPICAAuditEventConformance");
+		ae.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-conformance");
+	}
+
+	protected void addPatientVisitProfile(org.hl7.fhir.r4.model.AuditEvent ae) {
+		if (!ae.hasMeta()) ae.setMeta(new org.hl7.fhir.r4.model.Meta());
+		ae.getMeta().setSource("AISTPICAAuditEventPatientVisit");
+		ae.getMeta().addProfile("http://hl7.at/fhir/AISTPICA/R4/StructureDefinition/aist-pica-auditevent-patientvisit");
+	}
+
 
 }
