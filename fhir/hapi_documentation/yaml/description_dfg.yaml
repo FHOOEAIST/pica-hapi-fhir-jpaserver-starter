@@ -1,0 +1,93 @@
+url: AuditEvent/$dfg
+version: 1.0.0
+name: AuditEventToDFG
+title: Transform AuditEvents to DFG
+status: active
+kind: operation
+date: 2025-05-13
+publisher: FH Upper Austria
+contact:
+  - name: FH Upper Austria
+description: >
+  Transforms AuditEvents into a DFG log. Allows filtering AuditEvents by date, patient, actor,
+  patient visit, conformance code, or grouping before transformation.
+
+code:
+  comment: Implemented for R5 AuditEvents
+base:
+  resource: AuditEvent
+system: false
+type: true
+instance: false
+
+parameter:
+  - name: start
+    use: in
+    min: 0
+    max: 1
+    documentation: >
+      Filters AuditEvents by occurredDateTime start.
+      Events occurring after the start date are excluded.
+    type: dateTime
+
+  - name: end
+    use: in
+    min: 0
+    max: 1
+    documentation: >
+      Filters AuditEvents by occurredDateTime end.
+      Events occurring before the end date are excluded.
+    type: dateTime
+
+  - name: core
+    use: in
+    min: 0
+    max: *
+    documentation: >
+      Filters AuditEvents by AuditEvent.patient.reference or AuditEvent.patient.identifier.value.
+      Only events matching one of the listed patients are included.
+    type: string
+
+  - name: actor
+    use: in
+    min: 0
+    max: *
+    documentation: >
+      Filters AuditEvents by AuditEvent.encounter.reference.
+      Only events matching one of the referenced actors are included.
+    type: string
+
+  - name: patientvisit
+    use: in
+    min: 0
+    max: *
+    documentation: >
+      Filters AuditEvents by AuditEvent.practitioner.reference.
+      Only events matching one of the referenced patient visits are included.
+    type: string
+
+  - name: conformance
+    use: in
+    min: 0
+    max: *
+    documentation: >
+      Filters AuditEvents by AuditEvent.code.text or AuditEvent.code.coding.
+      Only events matching one of the referenced conformance codes are included.
+    type: string
+
+  - name: grouping
+    use: in
+    min: 0
+    max: 1
+    documentation: >
+      Filters events based on the first code display (getCode.getCodingFirstRep.getDisplay).
+      Only events matching the given display value are included.
+    type: string
+
+  - name: result
+    use: out
+    min: 1
+    max: 1
+    documentation: >
+      Returns the transformed AuditEvents as a DFG log.
+    type: string

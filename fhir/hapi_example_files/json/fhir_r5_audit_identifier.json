@@ -33,11 +33,10 @@
             }
         },
         "patient": {
-            "identifier": {
-                "system": "http://localhost:8080/fhir/Patient/1",
-                "value": "18"
-            },
-            "display": "Mr. Kai187 Burkhard529 Pilz655"
+          "identifier": {
+            "system": "http://localhost:8080/fhir/Patient/1",
+            "value": "18"
+          }
         },
         "encounter": {
 		"reference": "urn:uuid:00f4931b-925b-4b3/a-a72f-5b12a0d5f43f"

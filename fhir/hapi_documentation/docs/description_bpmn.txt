@@ -1,4 +1,4 @@
-Controller Overview: FileUploadController.java
+PetriNetGenerator)
 Location: /bpmn/
 Version: 1.0.0
 Author: FH Upper Austria
