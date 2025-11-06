@@ -19,10 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -275,28 +272,35 @@ public class AuditEventResourceProviderR5 extends AbstractAuditEventResourceProv
 		super.toDfg(events, grouping, theServletResponse);
 	}
 
-	public static List<AuditEvent> filterByPatient(List<AuditEvent> events, List<String> patientLst){
+public static List<AuditEvent> filterByPatient(List<AuditEvent> events, List<String> patientLst) {
 
-		if (patientLst == null || patientLst.get(0).trim().isEmpty())
-			return events;
+	if (patientLst == null || patientLst.isEmpty() || patientLst.get(0).trim().isEmpty())
+		return events;
 
-		List<AuditEvent> returnVal = new java.util.ArrayList<>();
-		for (String patientStr : patientLst){
-			String normalizedPatientId = patientStr.startsWith("Patient/") ? patientStr : "Patient/" + patientStr;
-			List<AuditEvent> temp = events.stream()
-				.filter(auditEvent ->
-					normalizedPatientId.equals(auditEvent.getPatient().getIdentifier().getValue()) ||
-						normalizedPatientId.equals(auditEvent.getPatient().getReference()))
-				.collect(Collectors.toList());
+		List<AuditEvent> returnVal = new ArrayList<>();
 
-			returnVal = Stream.concat(returnVal.stream(), temp.stream())
-				.collect(Collectors.toList());
-		}
-		Set<AuditEvent> uniqueEvents = new java.util.HashSet<>(returnVal);
-		returnVal.clear();
-		returnVal.addAll(uniqueEvents);
-		return returnVal;
+	for (String patientStr : patientLst) {
+		String normalizedPatientId = patientStr.startsWith("Patient/") ? patientStr : "Patient/" + patientStr;
+
+		List<AuditEvent> temp = events.stream()
+			.filter(auditEvent -> {
+				boolean matchesReference = auditEvent.getPatient() != null &&
+					normalizedPatientId.equals(auditEvent.getPatient().getReference());
+
+				boolean matchesIdentifier = auditEvent.getPatient() != null &&
+					auditEvent.getPatient().getIdentifier() != null &&
+					normalizedPatientId.replace("Patient/", "")
+						.equals(auditEvent.getPatient().getIdentifier().getValue());
+
+				return matchesReference || matchesIdentifier;
+			})
+			.collect(Collectors.toList());
+
+		returnVal = Stream.concat(returnVal.stream(), temp.stream())
+			.collect(Collectors.toList());
 	}
+	return returnVal;
+}
 
 	public static List<AuditEvent> filterByTime(List<AuditEvent> events, String startDateStr,String endDateStr){
 

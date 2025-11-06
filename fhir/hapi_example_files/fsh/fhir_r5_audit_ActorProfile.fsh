@@ -36,7 +36,9 @@ Usage:       #example
 * patient.identifier.system = "http://localhost:8080/fhir/Patient/1"
 * patient.identifier.value = "18"
 
+* basedOn[0].reference = "ServiceRequest/4"
 * encounter.reference = "urn:uuid:00f4931b-925b-4b3/a-a72f-5b12a0d5f43f"
+
 
 * agent[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
 * agent[0].type.coding[0].code = #PRF

@@ -1,0 +1,8 @@
+{
+  "resourceType": "Practitioner",
+  "id": "2",
+  "name": [{ "family": "Example", "given": ["Thomas"] }],
+  "qualification": [{
+    "code": { "text": "General Practitioner" }
+  }]
+}

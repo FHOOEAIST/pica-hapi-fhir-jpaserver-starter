@@ -1,0 +1,6 @@
+{
+  "resourceType": "Organization",
+  "id": "1",
+  "name": "Test Health Center",
+  "address": [{ "city": "Testville", "country": "AT" }]
+}

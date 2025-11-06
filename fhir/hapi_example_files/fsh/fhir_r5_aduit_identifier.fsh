@@ -1,43 +1,40 @@
 /*##############################################################################
 # Type:       FSH-File for an FHIR® Example
-# About:      Example for the HL7 Austria FHIR® Core Profile for AuditEvent.
-# Created by: HL7® Austria, TC FHIR®
+# About:      Converted AuditEvent example
 ##############################################################################*/
 
-Instance:    HL7ATCoreAuditEventExample01
+Instance:    HL7ATCoreAuditEventExample02
 InstanceOf:  AuditEvent
-Description: "Example for the usage of the HL7 AT Core AuditEvent Profile"
+Description: "Converted AuditEvent example from JSON"
 Usage:       #example
 
-* id = "urn:uuid:00f4931b-925b-4b3a-a72f-5b12a0d5f43f"
+* id = ""
 * text.status = "generated"
 
-* category[0].coding[0].system = "http://hl7.org/fhir/restful-interaction"
-* category[0].coding[0].code = #transaction
-* category[0].coding[0].display = "transaction"
+* category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/audit-event-category"
+* category[0].coding[0].code = #security
+* category[0].coding[0].display = "Security"
 
 * code.coding[0].system = "http://snomed.info/sct"
 * code.coding[0].code = #239005
 * code.coding[0].display = "SNOMED Code"
 * code.text = "SNOMED Code"
 
-* action = "C"
-* occurredDateTime = "1988-08-02T05:16:11+02:00"
-* recorded = "1988-08-02T05:16:11+02:00"
+* type.coding[0].system = "http://terminology.hl7.org/CodeSystem/audit-event-type"
+* type.coding[0].code = #rest
+* type.coding[0].display = "Restful Operation"
 
-* outcome.code.system = "http://terminology.hl7.org/CodeSystem/audit-event-outcome"
-* outcome.code.code = #0
-* outcome.code.display = "Success"
+* occurredDateTime = "2025-10-24T10:00:00Z"
 
-* patient.identifier.system = "http://localhost:8080/fhir/Patient/1"
-* patient.identifier.value = "18"
+* basedOn[0].reference = "ServiceRequest/4"
+* encounter.reference = "Encounter/3"
+* patient.identifier.system = "system": "http://example.org/patient"
+* patient.identifier.value = "pat-1"
 
-* encounter.reference = "urn:uuid:00f4931b-925b-4b3/a-a72f-5b12a0d5f43f"
-
-* agent[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-RoleClass"
-* agent[0].type.coding[0].code = #PRF
-* agent[0].type.coding[0].display = "Practitioner"
-
+* agent[0].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/extra-agent-type"
+* agent[0].type.coding[0].code = #humanuser
+* agent[0].type.coding[0].display = "Human User"
 * agent[0].who.reference = "Practitioner/2"
-* agent[0].who.display = "Dr Adam Careful"
-* agent[0].requestor = true
+
+* source.site = "Hospital System"
+* source.observer.reference = "Device/5"

@@ -1,0 +1,13 @@
+{
+  "resourceType": "Device",
+  "id": "10",
+  "identifier": [{ "value": "ZWCvxeDbRuyx1zFJ" }],
+  "type": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/device-type",
+      "code": "server",
+      "display": "Server"
+    }]
+  },
+  "owner": { "reference": "Organization/1" }
+}

@@ -21,6 +21,7 @@ import science.aist.gtf.transformation.Transformer;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -280,7 +281,35 @@ public class AuditEventResourceProviderR4 extends AbstractAuditEventResourceProv
 		}
 		return bundle;
 	}
+	public static List<org.hl7.fhir.r5.model.AuditEvent> filterByPatient(List<org.hl7.fhir.r5.model.AuditEvent> events, List<String> patientLst) {
 
+		if (patientLst == null || patientLst.isEmpty() || patientLst.get(0).trim().isEmpty())
+			return events;
+
+		List<org.hl7.fhir.r5.model.AuditEvent> returnVal = new ArrayList<>();
+
+		for (String patientStr : patientLst) {
+			String normalizedPatientId = patientStr.startsWith("Patient/") ? patientStr : "Patient/" + patientStr;
+
+			List<org.hl7.fhir.r5.model.AuditEvent> temp = events.stream()
+				.filter(auditEvent -> {
+					boolean matchesReference = auditEvent.getPatient() != null &&
+						normalizedPatientId.equals(auditEvent.getPatient().getReference());
+
+					boolean matchesIdentifier = auditEvent.getPatient() != null &&
+						auditEvent.getPatient().getIdentifier() != null &&
+						normalizedPatientId.replace("Patient/", "")
+							.equals(auditEvent.getPatient().getIdentifier().getValue());
+
+					return matchesReference || matchesIdentifier;
+				})
+				.collect(Collectors.toList());
+
+			returnVal = Stream.concat(returnVal.stream(), temp.stream())
+				.collect(Collectors.toList());
+		}
+		return returnVal;
+	}
 
 	//ToDO validate if that filter makes sense => recorded time has been used instead of occured time
 	public static List<org.hl7.fhir.r4.model.AuditEvent> filterByTimeR4(List<org.hl7.fhir.r4.model.AuditEvent> events, String startDateStr, String endDateStr){

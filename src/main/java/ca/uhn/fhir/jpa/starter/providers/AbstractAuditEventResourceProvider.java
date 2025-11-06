@@ -119,10 +119,10 @@ public class AbstractAuditEventResourceProvider {
 
 	protected void toOcel(List<AuditEvent> collect, HttpServletResponse theServletResponse) throws IOException {
 		var ocelService = new FhirAuditEventsToOCELLogService();
-
 		var log = ocelService.convertFhirAuditEventsToOCELLog(collect);
 		var repository = new science.aist.ocel.model.impl.LogRepository();
 		var outputStream = new ByteArrayOutputStream();
+
 		repository.save(new science.aist.ocel.model.ObjectFactory().createLog(log), outputStream);
 		String res = outputStream.toString(StandardCharsets.UTF_8);
 
@@ -133,18 +133,59 @@ public class AbstractAuditEventResourceProvider {
 	}
 
 	protected void toDfg(List<AuditEvent> collect, String traceConceptNameResolverPath, HttpServletResponse theServletResponse) throws IOException {
-		if (traceConceptNameResolverPath == null || traceConceptNameResolverPath.isEmpty() || traceConceptNameResolverPath.isBlank()) {
-			traceConceptNameResolverPath = "getPatient.getReference";
-		}
-		var xesService = new FhirAuditEventsToXESLogService(traceConceptNameResolverPath, "getCode.getCodingFirstRep.getDisplay");
-		LogType log = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle("not needed", collect));
+		String res;
 
-		Transformer<LogType, String> xes2graphViz = new XesToGraphTransformer().andThen(new GraphToDirectlyFollowsGraphGraphVizTransformer());
-		String res = xes2graphViz.applyTransformation(log);
+		List<AuditEvent> identifierEvents = splitPatientClassifier(collect, 1);
+		List<AuditEvent> referenceEvents = splitPatientClassifier(collect, 2);
+
+		int withoutClassifier = collect.size() - identifierEvents.size() - referenceEvents.size();
+		if(withoutClassifier > 0)
+			System.out.println(withoutClassifier + " AuditEvents without patient classifier");
+
+		LogType combinedLog = null;
+
+		try {
+			if (!identifierEvents.isEmpty()) {
+				var xesService = new FhirAuditEventsToXESLogService("getPatient.getIdentifier.getValue", "getCode.getCodingFirstRep.getDisplay");
+				LogType logIdentifier = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle("DFG Identifier Log", identifierEvents));
+				combinedLog = logIdentifier;
+			}
+			if (!referenceEvents.isEmpty()) {
+				var xesService = new FhirAuditEventsToXESLogService("getPatient.getReference", "getCode.getCodingFirstRep.getDisplay");
+				LogType logReference = xesService.convertFhirAuditEventsToXESLog(new AuditEventBundle("DFG Reference Log", referenceEvents));
+
+				combinedLog = combineXesLogs(combinedLog, logReference);
+			}
+
+
+			if (combinedLog == null) {
+				throw new IllegalStateException("Can not find auditevent with valid Identifier oder Reference");
+			}
+
+			Transformer<LogType, String> xes2graphViz = new XesToGraphTransformer().andThen(new GraphToDirectlyFollowsGraphGraphVizTransformer());
+			res = xes2graphViz.applyTransformation(combinedLog);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			res = "digraph G { error [label=\"An error occurred while processing DFG generation: " + e.getMessage() + "\"] }";
+		}
 
 		theServletResponse.setStatus(200);
 		theServletResponse.setContentType("image/svg+xml");
+
+		if (res == null || res.isEmpty()) {
+			res = "digraph G { error [label=\"Failed to generate graph data\"] }";
+		}
+
 		MutableGraph g = new Parser().read(res);
-		Graphviz.fromGraph(g).totalMemory(1000000000).width(1024).render(Format.SVG).toOutputStream(theServletResponse.getOutputStream());
+		Graphviz.fromGraph(g).totalMemory(1000000000).width(1024).render(Format.SVG).toOutputStream(theServletResponse.getOutputStream());}
+
+
+	private LogType combineXesLogs(LogType log1, LogType log2) {
+		if (log1 == null) return log2;
+		if (log2 == null) return log1;
+
+		log1.getTrace().addAll(log2.getTrace());
+		return log1;
 	}
 }

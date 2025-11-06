@@ -1,0 +1,10 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "6",
+  "status": "completed",
+  "intent": "order",
+  "subject": { "reference": "Patient/1" },
+  "requester": { "reference": "Practitioner/2" },
+  "encounter": { "reference": "Encounter/4" },
+  "code": { "text": "Routine Check" }
+}
