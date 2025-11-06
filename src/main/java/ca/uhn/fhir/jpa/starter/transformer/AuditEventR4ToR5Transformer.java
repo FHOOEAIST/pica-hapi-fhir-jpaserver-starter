@@ -37,18 +37,19 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 
 
 	private org.hl7.fhir.r5.model.AuditEvent transformR4toR5(AuditEvent auditEvent) {
-		System.out.println(auditEvent.toString());
+
+		// FhirContext ctx = FhirContext.forR4(); // for FHIR R4
+		// String auditEventJson = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(auditEvent);
+		// System.out.println("auditevent R4:"+auditEventJson);
+
 		org.hl7.fhir.r5.model.AuditEvent ae = new org.hl7.fhir.r5.model.AuditEvent();
-		System.out.println(auditEvent.getAction().toString());
 
 		//set fhir r5 action
 		org.hl7.fhir.r5.model.AuditEvent.AuditEventAction action = org.hl7.fhir.r5.model.AuditEvent.AuditEventAction.fromCode(auditEvent.getAction().toString());
 		ae.setAction(action);
 
-
 		//set fhir r5 recorded
 		ae.setRecorded(auditEvent.getRecorded());
-
 
 		//set fhir r5 outcome
 		if(auditEvent.getOutcome() != null) {
@@ -57,11 +58,10 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 			ae.getOutcome().getCode().setSystem(auditEvent.getOutcome().getSystem());
 		}
 
-
 		//set fhir r5 agent
 		try {
 			for (int i = 0; i < auditEvent.getAgent().size(); i++) {
-			//for (int i = 0; i < 1; i++) {
+
 				ae.addAgent();
 				ae.getAgent().get(i).setWho(new org.hl7.fhir.r5.model.Reference(auditEvent.getAgent().get(i).getWho().getReference()));
 				ae.getAgent().get(i).getWho().setDisplay(auditEvent.getAgent().get(i).getWho().getDisplay());
@@ -77,47 +77,117 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 			System.out.println("No Source found");
 		}
 
-
 		//set fhir r5 source
 		try {
 			ae.getSource().setObserver(new org.hl7.fhir.r5.model.Reference(auditEvent.getSource().getObserver().getReference()));
-			ae.getSource().setSite(new org.hl7.fhir.r5.model.Reference(auditEvent.getSource().getSite()));
+
+			org.hl7.fhir.r5.model.Reference reference = new org.hl7.fhir.r5.model.Reference();
+			reference.setReference(auditEvent.getSource().getSite());
+			ae.getSource().setSite(reference);
 			ae.getSource().getObserver().setDisplay(auditEvent.getSource().getObserver().getDisplay());
 			ae.getSource().getObserver().setId(auditEvent.getSource().getObserver().getId());
+
+			for(int i =0; i< auditEvent.getSource().getType().size();i++){
+				org.hl7.fhir.r5.model.Coding coding = new org.hl7.fhir.r5.model.Coding();
+				if(auditEvent.getSource().getType().get(i).hasDisplay()) coding.setDisplay(auditEvent.getSource().getType().get(i).getDisplay());
+				if(auditEvent.getSource().getType().get(i).hasSystem()) coding.setSystem(auditEvent.getSource().getType().get(i).getSystem());
+				if(auditEvent.getSource().getType().get(i).hasCode()) coding.setCode(auditEvent.getSource().getType().get(i).getCode());
+				if(auditEvent.getSource().getType().get(i).hasVersion()) coding.setVersion(auditEvent.getSource().getType().get(i).getVersion());
+				if(auditEvent.getSource().getType().get(i).hasUserSelected()) coding.setUserSelected(auditEvent.getSource().getType().get(i).getUserSelected());
+
+				ae.getSource().addType(new org.hl7.fhir.r5.model.CodeableConcept().addCoding(coding));
+			}
 		}catch (Exception e) {
 			System.out.println("No Source found");
 		}
 
-
-
 		//set fhir r5 entity
 		try {
-			for (int i = 0; i < auditEvent.getEntity().size(); i++) {
-				ae.addEntity();
-				ae.getEntity().get(i).setWhat(new org.hl7.fhir.r5.model.Reference(auditEvent.getEntity().get(i).getWhat().getReference()));
-				ae.getEntity().get(i).setQuery(auditEvent.getEntity().get(i).getQuery());
-				ae.getEntity().get(i).getRole().addCoding();
-				ae.getEntity().get(i).getRole().getCoding().get(0).setDisplay(auditEvent.getEntity().get(i).getRole().getDisplay());
-				ae.getEntity().get(i).getRole().getCoding().get(0).setSystem(auditEvent.getEntity().get(i).getRole().getSystem());
-				ae.getEntity().get(i).getRole().getCoding().get(0).setCode(auditEvent.getEntity().get(i).getRole().getCode());
-				ae.getEntity().get(i).getWhat().setDisplay(auditEvent.getEntity().get(i).getWhat().getDisplay());
-				ae.getEntity().get(i).getWhat().setId(auditEvent.getEntity().get(i).getWhat().getId());
-				ae.getEntity().get(i).getWhat().setReference(auditEvent.getEntity().get(i).getWhat().getReference());
-				org.hl7.fhir.r5.model.CodeableConcept c = new org.hl7.fhir.r5.model.CodeableConcept();
+			if (auditEvent.hasEntity() && !auditEvent.getEntity().isEmpty()) {
+				for (int i = 0; i < auditEvent.getEntity().size(); i++) {
+					ae.addEntity();
 
-				if(auditEvent.getEntity().get(i).getDetail() != null && auditEvent.getEntity().get(i).getDetail().get(0).getType() != null)
-					c.setText(auditEvent.getEntity().get(i).getDetail().get(0).getType());
+					// what
+					if (auditEvent.getEntity().get(i).hasWhat() && auditEvent.getEntity().get(i).getWhat().hasReference()) {
+						ae.getEntity().get(i).setWhat(new org.hl7.fhir.r5.model.Reference(auditEvent.getEntity().get(i).getWhat().getReference()));
+					}
+					if (auditEvent.getEntity().get(i).hasQuery()) {
+						ae.getEntity().get(i).setQuery(auditEvent.getEntity().get(i).getQuery());
+					}
 
-				if(auditEvent.getEntity().get(i).getDetail() != null && auditEvent.getEntity().get(i).getDetail().get(0).getType() != null) {
-					DataType dt = new org.hl7.fhir.r5.model.StringType(auditEvent.getEntity().get(i).getDetail().get(0).getValue().toString());
-					ae.getEntity().get(i).addDetail().setValue(dt);
+					// role
+					if (auditEvent.getEntity().get(i).hasRole() && auditEvent.getEntity().get(i).hasRole()) {
+						org.hl7.fhir.r5.model.Coding coding = new org.hl7.fhir.r5.model.Coding();
+						org.hl7.fhir.r4.model.Coding roleCoding = auditEvent.getEntity().get(i).getRole();
+
+						if (roleCoding.hasDisplay()) coding.setDisplay(roleCoding.getDisplay());
+						if (roleCoding.hasSystem()) coding.setSystem(roleCoding.getSystem());
+						if (roleCoding.hasCode()) coding.setCode(roleCoding.getCode());
+						if (roleCoding.hasVersion()) coding.setVersion(roleCoding.getVersion());
+						if (roleCoding.hasUserSelected()) coding.setUserSelected(roleCoding.getUserSelected());
+
+						ae.getEntity().get(i).setRole(new org.hl7.fhir.r5.model.CodeableConcept().addCoding(coding));
+					}
+
+					// security label
+					if (auditEvent.getEntity().get(i).hasSecurityLabel()) {
+						for (int j = 0; j < auditEvent.getEntity().get(i).getSecurityLabel().size(); j++) {
+							org.hl7.fhir.r4.model.Coding src = auditEvent.getEntity().get(i).getSecurityLabel().get(j);
+							org.hl7.fhir.r5.model.Coding codingSecurity = new org.hl7.fhir.r5.model.Coding();
+
+							if (src.hasDisplay()) codingSecurity.setDisplay(src.getDisplay());
+							if (src.hasSystem()) codingSecurity.setSystem(src.getSystem());
+							if (src.hasCode()) codingSecurity.setCode(src.getCode());
+							if (src.hasVersion()) codingSecurity.setVersion(src.getVersion());
+							if (src.hasUserSelected()) codingSecurity.setUserSelected(src.getUserSelected());
+
+							org.hl7.fhir.r5.model.CodeableConcept cc = new org.hl7.fhir.r5.model.CodeableConcept().addCoding(codingSecurity);
+							ae.getEntity().get(i).addSecurityLabel(cc);
+						}
+					}
+
+					// detail
+					if (auditEvent.getEntity().get(i).hasDetail()) {
+						for (int j = 0; j < auditEvent.getEntity().get(i).getDetail().size(); j++) {
+							org.hl7.fhir.r4.model.AuditEvent.AuditEventEntityDetailComponent srcDetail = auditEvent.getEntity().get(i).getDetail().get(j);
+							org.hl7.fhir.r5.model.AuditEvent.AuditEventEntityDetailComponent dstDetail = new org.hl7.fhir.r5.model.AuditEvent.AuditEventEntityDetailComponent();
+
+							if (srcDetail.hasType()) {
+								org.hl7.fhir.r5.model.Coding codingDetail = new org.hl7.fhir.r5.model.Coding();
+								codingDetail.setDisplay(srcDetail.getType());
+								dstDetail.setType(new org.hl7.fhir.r5.model.CodeableConcept().addCoding(codingDetail));
+							}
+
+							if (srcDetail.hasValueStringType()) {
+								dstDetail.setValue(new org.hl7.fhir.r5.model.StringType(srcDetail.getValueStringType().getValue()));
+							} else if (srcDetail.hasValueBase64BinaryType()) {
+								dstDetail.setValue(new org.hl7.fhir.r5.model.Base64BinaryType(srcDetail.getValueBase64BinaryType().getValue()));
+							}
+
+							ae.getEntity().get(i).addDetail(dstDetail);
+						}
+					}
+
+					if (auditEvent.getEntity().get(i).hasWhat()) {
+						if (auditEvent.getEntity().get(i).getWhat().hasDisplay())
+							ae.getEntity().get(i).getWhat().setDisplay(auditEvent.getEntity().get(i).getWhat().getDisplay());
+						if (auditEvent.getEntity().get(i).getWhat().hasId())
+							ae.getEntity().get(i).getWhat().setId(auditEvent.getEntity().get(i).getWhat().getId());
+						if (auditEvent.getEntity().get(i).getWhat().hasReference())
+							ae.getEntity().get(i).getWhat().setReference(auditEvent.getEntity().get(i).getWhat().getReference());
+					}
+
+					if (auditEvent.getEntity().get(i).hasDetail() && auditEvent.getEntity().get(i).getDetail().get(0).hasType()) {
+						org.hl7.fhir.r5.model.CodeableConcept c = new org.hl7.fhir.r5.model.CodeableConcept();
+						c.setText(auditEvent.getEntity().get(i).getDetail().get(0).getType());
+					}
 				}
+			} else {
+				System.out.println("No Entity found");
 			}
-		}catch (Exception e) {
-			System.out.println("No Entity found");
+		} catch (Exception e) {
+			System.out.println("Error mapping Entity: " + e.getMessage());
 		}
-
-
 
 		//set fhir r5 coding
 		try {
@@ -134,7 +204,6 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 		}catch (Exception e) {
 			System.out.println("No subtype found");
 		}
-
 
 		//set fhir r5 Authorization
 		ae.addAuthorization();
@@ -167,9 +236,6 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 		}catch (Exception e) {
 			System.out.println("No purposeOfEvent found");
 		}
-
-
-
 
 		// Set the patient reference if available
 		org.hl7.fhir.r5.model.Reference r5Reference = new org.hl7.fhir.r5.model.Reference();
@@ -208,17 +274,14 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 
 
 		// Set the core reference if available
-
 		if (!auditEvent.getEntity().isEmpty() &&  auditEvent.getEntity().get(0).getWhat() != null) {
 			Reference ref = auditEvent.getEntity().get(0).getWhat();
 			org.hl7.fhir.r5.model.Reference reference = new org.hl7.fhir.r5.model.Reference();
 			reference.setReference(ref.getReference());
 			ae.setPatient(reference);
 		} else {
-			System.out.println("core reference is null");
+			System.out.println("Core reference is null");
 		}
-
-
 
 
 		// Set the severity reference if available
@@ -229,7 +292,6 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 		} else {
 			System.out.println("Encounter severity is null");
 		}
-
 
 
 		// Set the code if available, handle different types
@@ -294,31 +356,21 @@ public class AuditEventR4ToR5Transformer implements Transformer<AuditEvent, org.
 
 		}
 
-
-
 		//ToDo remove hardcoded information once the extensions are available
-		org.hl7.fhir.r5.model.AuditEvent.AuditEventSeverity sev = org.hl7.fhir.r5.model.AuditEvent.AuditEventSeverity.fromCode("critical");
-		ae.setSeverity(sev);
+		 org.hl7.fhir.r5.model.AuditEvent.AuditEventSeverity sev = org.hl7.fhir.r5.model.AuditEvent.AuditEventSeverity.fromCode("alert");
+		 ae.setSeverity(sev);
 		ae.setEncounter(new org.hl7.fhir.r5.model.Reference("Encounter/3"));
 
-
-		FhirContext ctx = FhirContext.forR5();
-		String json = ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(ae);
-
-		try(FileWriter writer = new FileWriter("C:\\Users\\P43104\\Desktop\\AuditEvent.json")){
-			writer.write(json);
-		}catch (IOException e){
-			e.printStackTrace();
-		}
-
+		//FhirContext ctx2 =  FhirContext.forR5();
+		//String json = ctx2.newJsonParser().setPrettyPrint(true).encodeResourceToString(ae);
+		//System.out.println("auditevent R5:"+json);
 
 		return ae;
 	}
 
-
 	@Override
 	public org.hl7.fhir.r5.model.AuditEvent applyTransformation(AuditEvent auditEvent) {
-		System.out.println("AuditEventR4ToR5Transformer.applyTransformation\n\n\n\nwdw\n\n");
+		System.out.println("AuditEventR4ToR5Transformer.applyTransformation");
 		//return auditEventAuditEventFunction.apply(auditEvent);
 		return transformR4toR5(auditEvent);
 	}
